@@ -60,7 +60,8 @@ setup(
     tests_require=test_deps,
     # Add here the package dependencies
     install_requires=[
-        'gibson>=0.4'
+        'gibson>=0.4',
+        'PyYaml'
     ],
     entry_points={
         'console_scripts': [
