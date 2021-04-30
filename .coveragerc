@@ -1,0 +1,3 @@
+[report]
+omit =
+    ./gibson_env_utilities/__version__.py
