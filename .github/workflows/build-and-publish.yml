@@ -1,4 +1,4 @@
-name: Build
+name: BuildTest
 
 on: [push, pull_request, pull_request_review]
 
@@ -17,6 +17,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
+          sudo apt install libopenmpi-dev
           python -m pip install --upgrade pip
           pip install .[test]
       - name: Test with pytest
