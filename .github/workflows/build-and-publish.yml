@@ -17,12 +17,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          sudo apt install libopenmpi-dev
+          sudo apt install -y libopenmpi-dev
           python -m pip install --upgrade pip
           pip install .[test]
       - name: Test with pytest
         run: |
-          pytest --cov=generic_dataset --cov-report xml:coverage.xml --ignore-glob *gpu*.py
+          pytest --cov=gibson_env_utilities --cov-report xml:coverage.xml
           coverage combine --append || true
           coverage report
           coverage xml
