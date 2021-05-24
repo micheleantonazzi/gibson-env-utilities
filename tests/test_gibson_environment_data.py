@@ -9,3 +9,8 @@ def test_get_data():
 def test_get_semantic_environments():
     data = GibsonEnvironmentsData()
     assert len(data.get_environments_with_semantics()) == 88
+
+
+def test_get_environments_name():
+    data = GibsonEnvironmentsData()
+    assert len(data.get_environment_names()) == 665
