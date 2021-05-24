@@ -1,9 +1,5 @@
-import gibson.assets.assets_manager
 import pywavefront
-from gibson.assets.assets_manager import AssetsManager
 import os
-
-from pywavefront import visualization
 
 
 class GibsonAssetsManager:
