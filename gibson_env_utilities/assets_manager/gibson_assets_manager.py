@@ -1,10 +1,17 @@
 import pywavefront
 import os
 
+from gibson.assets.assets_manager import AssetsManager, AssetsPathNotSetException
+from termcolor import colored
+
 
 class GibsonAssetsManager:
-    def __init__(self, assets_path: str):
-        self._assets_path = assets_path
+    def __init__(self):
+        try:
+            self._assets_path = AssetsManager().get_assets_path()
+        except AssetsPathNotSetException:
+            print(colored('Gibson assets path is not correctly set! It is set to an example directory, used only for testing! ', 'red'))
+        self._assets_path = os.path.dirname(__file__)
 
     def load_obj(self, environment_name: str) -> pywavefront.Wavefront:
         """
