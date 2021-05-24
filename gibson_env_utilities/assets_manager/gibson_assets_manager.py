@@ -1,3 +1,4 @@
+import gibson.assets.assets_manager
 import pywavefront
 from gibson.assets.assets_manager import AssetsManager
 import os
@@ -6,10 +7,10 @@ from pywavefront import visualization
 
 
 class GibsonAssetsManager:
-    def __init__(self):
-        self._assets_manager = AssetsManager()
+    def __init__(self, assets_path: str):
+        self._assets_path = assets_path
 
-    def load_obj(self, environment_name: str):
+    def load_obj(self, environment_name: str) -> pywavefront.Wavefront:
         """
         Loads and returns the specified environment obj file
         :param environment_name: the name of the environment whose wavefront file is to be loaded
@@ -17,6 +18,6 @@ class GibsonAssetsManager:
         :return:
         """
 
-        obj_path = os.path.join(self._assets_manager.get_assets_path(), environment_name, 'mesh_z_up.obj')
-        mesh = pywavefront.Wavefront(obj_path)
-        visualization.draw(mesh)
+        obj_path = os.path.join(self._assets_path, 'dataset', environment_name, 'mesh_z_up.obj')
+        mesh = pywavefront.Wavefront(obj_path, create_materials=True)
+        return mesh
