@@ -61,7 +61,9 @@ setup(
     # Add here the package dependencies
     install_requires=[
         'gibson>=0.7',
-        'PyYaml'
+        'PyYaml',
+        'pywavefront',
+        'termcolor'
     ],
     entry_points={
         'console_scripts': [
