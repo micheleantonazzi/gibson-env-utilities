@@ -5,10 +5,9 @@ from gibson.assets.assets_manager import AssetsManager, AssetsPathNotSetExceptio
 from gibson_env_utilities.assets_manager.gibson_assets_manager import GibsonAssetsManager
 
 try:
-    assets_path = assets_manager = AssetsManager().get_assets_path()
+    assets_path = AssetsManager().get_assets_path()
 except AssetsPathNotSetException:
-    assets_path = os.path.join(os.path.dirname(__file__), 'dataset')
-
+    assets_path = os.path.dirname(__file__)
 
 assets_manager = GibsonAssetsManager(assets_path=assets_path)
 
