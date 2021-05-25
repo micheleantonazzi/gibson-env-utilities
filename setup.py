@@ -1,11 +1,9 @@
 import os
 import re
-import subprocess
 
 # To use a consistent encoding
 from codecs import open as copen
 
-import yaml
 from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
