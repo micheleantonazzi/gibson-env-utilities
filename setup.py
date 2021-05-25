@@ -62,8 +62,8 @@ setup(
     install_requires=[
         'gibson>=0.7',
         'PyYaml',
-        'pywavefront',
-        'termcolor'
+        'termcolor',
+        'shapely'
     ],
     entry_points={
         'console_scripts': [
