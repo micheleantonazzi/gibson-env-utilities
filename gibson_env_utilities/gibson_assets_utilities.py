@@ -58,7 +58,7 @@ class GibsonAssetsUtilities:
         :type save_to_image: bool
         :return: None
         """
-        mesh = GibsonAssetsUtilities().load_obj(environment_name=environment_name)
+        mesh = self.load_obj(environment_name=environment_name)
 
         origin = self._environments_data.get_environment_data(environment_name)[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_POSITION]
         origin[2] += floor_offset
