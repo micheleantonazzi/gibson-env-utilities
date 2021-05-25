@@ -5,3 +5,4 @@ assets_manager = GibsonAssetsManager()
 
 def test_load_obj():
     assets_manager.load_obj('space7')
+    assets_manager.load_obj('house1')
