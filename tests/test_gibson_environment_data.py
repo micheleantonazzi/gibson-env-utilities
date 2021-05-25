@@ -5,6 +5,8 @@ def test_get_data():
     data = GibsonEnvironmentsData()
     assert len(data.get_environments_data().keys()) == 665
 
+    assert data.get_environments_data()['house1'] == data.get_environment_data('house1')
+
 
 def test_get_semantic_environments():
     data = GibsonEnvironmentsData()
