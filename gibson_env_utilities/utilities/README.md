@@ -1,9 +1,9 @@
-# Assets utilities
+# Gibson utilities
 
-This module manages Gibson's assets (the environments' dataset in particular) and offers a lot of utilities to manipulate them.
+This module offers a lot of useful utilities which facilitate the use of Gibson.
 
 ## Environments data
-*GibsonEnvironmentsData* implements a series of operations to retrieve and use some useful information about the worlds in the Gibson's dataset.
+*GibsonEnvironmentsData* implements a series of operations to retrieve and use some information about the worlds in the Gibson's dataset.
 This information includes:
 * the environment's name
 * if the environment is semantically annotated

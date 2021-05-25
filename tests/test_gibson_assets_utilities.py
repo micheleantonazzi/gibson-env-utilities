@@ -1,6 +1,6 @@
 import pytest
 
-from gibson_env_utilities.assets_utilities.gibson_assets_utilities import GibsonAssetsUtilities
+from gibson_env_utilities.utilities.gibson_assets_utilities import GibsonAssetsUtilities
 
 assets_manager = GibsonAssetsUtilities()
 

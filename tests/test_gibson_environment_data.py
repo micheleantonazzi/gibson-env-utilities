@@ -1,5 +1,5 @@
-from gibson_env_utilities.assets_utilities.gibson_assets_utilities import GibsonAssetsUtilities
-from gibson_env_utilities.assets_utilities.gibson_environments_data import GibsonEnvironmentsData
+from gibson_env_utilities.utilities.gibson_assets_utilities import GibsonAssetsUtilities
+from gibson_env_utilities.utilities.gibson_environments_data import GibsonEnvironmentsData
 
 
 def test_get_data():

@@ -7,7 +7,7 @@ from gibson.assets.assets_manager import AssetsManager, AssetsPathNotSetExceptio
 from matplotlib import pyplot as plt
 from termcolor import colored
 
-from gibson_env_utilities.assets_utilities.gibson_environments_data import GibsonEnvironmentsData
+from gibson_env_utilities.utilities.gibson_environments_data import GibsonEnvironmentsData
 
 
 class GibsonAssetsUtilities:
