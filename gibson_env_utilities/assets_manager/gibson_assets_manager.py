@@ -14,13 +14,13 @@ class GibsonAssetsManager:
             print(colored('Gibson assets path is not correctly set! It is set to an example directory, used only for testing! ', 'red'))
             self._assets_path = os.path.dirname(__file__)
 
-    def load_obj(self, environment_name: str) -> trimesh.Scene:
+    def load_obj(self, environment_name: str) -> trimesh.Trimesh:
         """
         Loads and returns the specified environment obj file
         :param environment_name: the name of the environment whose wavefront file is to be loaded
         :type environment_name: str
         :return: the mesh stored in the obj file
-        :rtype: trimesh.Scene
+        :rtype: trimesh.Trimesh
         """
 
         obj_path = os.path.join(self._assets_path, 'dataset', environment_name, 'mesh_z_up.obj')
