@@ -1,7 +1,7 @@
 Ackermanville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -15,7 +15,7 @@ Ackermanville:
 Adairsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -29,7 +29,7 @@ Adairsville:
 Adrian:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -43,7 +43,7 @@ Adrian:
 Airport:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -57,7 +57,7 @@ Airport:
 Akiak:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -71,7 +71,7 @@ Akiak:
 Albertville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -85,7 +85,7 @@ Albertville:
 Aldine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -99,7 +99,7 @@ Aldine:
 Aldrich:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -113,7 +113,7 @@ Aldrich:
 Alfred:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -127,7 +127,7 @@ Alfred:
 Allensville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -141,7 +141,7 @@ Allensville:
 Almena:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -155,7 +155,7 @@ Almena:
 Almota:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -169,7 +169,7 @@ Almota:
 Aloha:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -183,7 +183,7 @@ Aloha:
 Alstown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -197,7 +197,7 @@ Alstown:
 American:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -211,7 +211,7 @@ American:
 Anaheim:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -225,7 +225,7 @@ Anaheim:
 Ancor:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -239,7 +239,7 @@ Ancor:
 Andover:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -253,7 +253,7 @@ Andover:
 Angiola:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -267,7 +267,7 @@ Angiola:
 Annawan:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -281,7 +281,7 @@ Annawan:
 Annona:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -295,7 +295,7 @@ Annona:
 Anthoston:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -309,7 +309,7 @@ Anthoston:
 Apache:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -323,7 +323,7 @@ Apache:
 Applewold:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -337,7 +337,7 @@ Applewold:
 Arbutus:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -351,7 +351,7 @@ Arbutus:
 Archer:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -365,7 +365,7 @@ Archer:
 Arkansaw:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -379,7 +379,7 @@ Arkansaw:
 Arona:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -393,7 +393,7 @@ Arona:
 Artois:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -407,7 +407,7 @@ Artois:
 Ashport:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -421,7 +421,7 @@ Ashport:
 Assinippi:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -435,7 +435,7 @@ Assinippi:
 Athens:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -449,7 +449,7 @@ Athens:
 Auburn:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -463,7 +463,7 @@ Auburn:
 Aulander:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -477,7 +477,7 @@ Aulander:
 Avonia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -491,7 +491,7 @@ Avonia:
 Azusa:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -505,7 +505,7 @@ Azusa:
 Badger:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -519,7 +519,7 @@ Badger:
 Ballantine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -533,7 +533,7 @@ Ballantine:
 Ballou:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -547,7 +547,7 @@ Ballou:
 Baneberry:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -561,7 +561,7 @@ Baneberry:
 Barahona:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -575,7 +575,7 @@ Barahona:
 Barboursville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -589,7 +589,7 @@ Barboursville:
 Barranquitas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -603,7 +603,7 @@ Barranquitas:
 Bautista:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -617,7 +617,7 @@ Bautista:
 Beach:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -631,7 +631,7 @@ Beach:
 Beechwood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -645,7 +645,7 @@ Beechwood:
 Bellemeade:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -659,7 +659,7 @@ Bellemeade:
 Bellwood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -673,7 +673,7 @@ Bellwood:
 Belpre:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -687,7 +687,7 @@ Belpre:
 Benevolence:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -701,7 +701,7 @@ Benevolence:
 Benicia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -715,7 +715,7 @@ Benicia:
 Bertram:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -729,7 +729,7 @@ Bertram:
 Bethlehem:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -743,7 +743,7 @@ Bethlehem:
 Bettendorf:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -757,7 +757,7 @@ Bettendorf:
 Biltmore:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -771,7 +771,7 @@ Biltmore:
 Blackstone:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -785,7 +785,7 @@ Blackstone:
 Blenheim:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -799,7 +799,7 @@ Blenheim:
 Bohemia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -813,7 +813,7 @@ Bohemia:
 Bolton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -827,7 +827,7 @@ Bolton:
 Bonesteel:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -841,7 +841,7 @@ Bonesteel:
 Bonfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -855,7 +855,7 @@ Bonfield:
 Bonnie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -869,7 +869,7 @@ Bonnie:
 Booth:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -883,7 +883,7 @@ Booth:
 Bountiful:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -897,7 +897,7 @@ Bountiful:
 Bowlus:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -911,7 +911,7 @@ Bowlus:
 Bowmore:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -925,7 +925,7 @@ Bowmore:
 Branford:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -939,7 +939,7 @@ Branford:
 Braxton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -953,7 +953,7 @@ Braxton:
 Bremerton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -967,7 +967,7 @@ Bremerton:
 Brentsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -981,7 +981,7 @@ Brentsville:
 Brevort:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -995,7 +995,7 @@ Brevort:
 Brewton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1009,7 +1009,7 @@ Brewton:
 Brinnon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1023,7 +1023,7 @@ Brinnon:
 Broadwell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1037,7 +1037,7 @@ Broadwell:
 Broseley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1051,7 +1051,7 @@ Broseley:
 Brown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1065,7 +1065,7 @@ Brown:
 Browntown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1079,7 +1079,7 @@ Browntown:
 Burien:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1093,7 +1093,7 @@ Burien:
 Bushong:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1107,7 +1107,7 @@ Bushong:
 Byers:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1121,7 +1121,7 @@ Byers:
 Cabin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1135,7 +1135,7 @@ Cabin:
 Calavo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1149,7 +1149,7 @@ Calavo:
 Callicoon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1163,7 +1163,7 @@ Callicoon:
 Calmar:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1177,7 +1177,7 @@ Calmar:
 Cantwell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1191,7 +1191,7 @@ Cantwell:
 Capistrano:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1205,7 +1205,7 @@ Capistrano:
 Carneiro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1219,7 +1219,7 @@ Carneiro:
 Carpendale:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1233,7 +1233,7 @@ Carpendale:
 Carpio:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1247,7 +1247,7 @@ Carpio:
 Caruthers:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1261,7 +1261,7 @@ Caruthers:
 Cashel:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1275,7 +1275,7 @@ Cashel:
 Cason:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1289,7 +1289,7 @@ Cason:
 Castor:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1303,7 +1303,7 @@ Castor:
 Castroville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1317,7 +1317,7 @@ Castroville:
 Cauthron:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1331,7 +1331,7 @@ Cauthron:
 Cayuse:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1345,7 +1345,7 @@ Cayuse:
 Cebolla:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1359,7 +1359,7 @@ Cebolla:
 Channel:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1373,7 +1373,7 @@ Channel:
 Checotah:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1387,7 +1387,7 @@ Checotah:
 Chesaning:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1401,7 +1401,7 @@ Chesaning:
 Chesterbrook:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1415,7 +1415,7 @@ Chesterbrook:
 Chilhowie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1429,7 +1429,7 @@ Chilhowie:
 Chiloquin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1443,7 +1443,7 @@ Chiloquin:
 Chireno:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1457,7 +1457,7 @@ Chireno:
 Chrisney:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1471,7 +1471,7 @@ Chrisney:
 Churchton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1485,7 +1485,7 @@ Churchton:
 Circleville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1499,7 +1499,7 @@ Circleville:
 Cisne:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1513,7 +1513,7 @@ Cisne:
 Clairton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1527,7 +1527,7 @@ Clairton:
 Clarkridge:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1541,7 +1541,7 @@ Clarkridge:
 Clive:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1555,7 +1555,7 @@ Clive:
 Cobalt:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1569,7 +1569,7 @@ Cobalt:
 Cochranton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1583,7 +1583,7 @@ Cochranton:
 Codell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1597,7 +1597,7 @@ Codell:
 Coeburn:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1611,7 +1611,7 @@ Coeburn:
 Coffeen:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1625,7 +1625,7 @@ Coffeen:
 Cohoes:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1639,7 +1639,7 @@ Cohoes:
 Cokeville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1653,7 +1653,7 @@ Cokeville:
 Colebrook:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1667,7 +1667,7 @@ Colebrook:
 Collierville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1681,7 +1681,7 @@ Collierville:
 Connellsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1695,7 +1695,7 @@ Connellsville:
 Connoquenessing:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1709,7 +1709,7 @@ Connoquenessing:
 Convoy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1723,7 +1723,7 @@ Convoy:
 Cooperstown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1737,7 +1737,7 @@ Cooperstown:
 Copemish:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1751,7 +1751,7 @@ Copemish:
 Corder:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1765,7 +1765,7 @@ Corder:
 Cornville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1779,7 +1779,7 @@ Cornville:
 Coronado:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1793,7 +1793,7 @@ Coronado:
 Corozal:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1807,7 +1807,7 @@ Corozal:
 Cosmos:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1821,7 +1821,7 @@ Cosmos:
 Cottonport:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1835,7 +1835,7 @@ Cottonport:
 Couderay:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1849,7 +1849,7 @@ Couderay:
 Country:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1863,7 +1863,7 @@ Country:
 Cousins:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1877,7 +1877,7 @@ Cousins:
 Crandon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1891,7 +1891,7 @@ Crandon:
 Creede:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1905,7 +1905,7 @@ Creede:
 Crookston:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1919,7 +1919,7 @@ Crookston:
 Crugers:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1933,7 +1933,7 @@ Crugers:
 Culbertson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1947,7 +1947,7 @@ Culbertson:
 Cullison:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1961,7 +1961,7 @@ Cullison:
 Cutlerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1975,7 +1975,7 @@ Cutlerville:
 Dalcour:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -1989,7 +1989,7 @@ Dalcour:
 Dansville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2003,7 +2003,7 @@ Dansville:
 Darden:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2017,7 +2017,7 @@ Darden:
 Darnestown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2031,7 +2031,7 @@ Darnestown:
 Darrtown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2045,7 +2045,7 @@ Darrtown:
 Dauberville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2059,7 +2059,7 @@ Dauberville:
 Deatsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2073,7 +2073,7 @@ Deatsville:
 Dedham:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2087,7 +2087,7 @@ Dedham:
 Deemston:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2101,7 +2101,7 @@ Deemston:
 Delton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2115,7 +2115,7 @@ Delton:
 Denmark:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2129,7 +2129,7 @@ Denmark:
 Destin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2143,7 +2143,7 @@ Destin:
 Divide:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2157,7 +2157,7 @@ Divide:
 Donaldson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2171,7 +2171,7 @@ Donaldson:
 Dryville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2185,7 +2185,7 @@ Dryville:
 Duarte:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2199,7 +2199,7 @@ Duarte:
 Duluth:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2213,7 +2213,7 @@ Duluth:
 Dunmor:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2227,7 +2227,7 @@ Dunmor:
 Eagan:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2241,7 +2241,7 @@ Eagan:
 Eagerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2255,7 +2255,7 @@ Eagerville:
 Eastville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2269,7 +2269,7 @@ Eastville:
 Edgemere:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2283,7 +2283,7 @@ Edgemere:
 Edson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2297,7 +2297,7 @@ Edson:
 Ellaville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2311,7 +2311,7 @@ Ellaville:
 Elmira:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2325,7 +2325,7 @@ Elmira:
 Elton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2339,7 +2339,7 @@ Elton:
 Emmaus:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2353,7 +2353,7 @@ Emmaus:
 Espanola:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2367,7 +2367,7 @@ Espanola:
 Eudora:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2381,7 +2381,7 @@ Eudora:
 Euharlee:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2395,7 +2395,7 @@ Euharlee:
 Everton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2409,7 +2409,7 @@ Everton:
 Ewansville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2423,7 +2423,7 @@ Ewansville:
 Ewell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2437,7 +2437,7 @@ Ewell:
 Experiment:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2451,7 +2451,7 @@ Experiment:
 Fedora:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2465,7 +2465,7 @@ Fedora:
 Fishersville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2479,7 +2479,7 @@ Fishersville:
 Fitchburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2493,7 +2493,7 @@ Fitchburg:
 Fleming:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2507,7 +2507,7 @@ Fleming:
 Fonda:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2521,7 +2521,7 @@ Fonda:
 Forkland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2535,7 +2535,7 @@ Forkland:
 Foyil:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2549,7 +2549,7 @@ Foyil:
 Frankfort:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2563,7 +2563,7 @@ Frankfort:
 Frankton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2577,7 +2577,7 @@ Frankton:
 Fredericksburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2591,7 +2591,7 @@ Fredericksburg:
 Freedom:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2605,7 +2605,7 @@ Freedom:
 Frierson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2619,7 +2619,7 @@ Frierson:
 Frontenac:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2633,7 +2633,7 @@ Frontenac:
 Funkstown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2647,7 +2647,7 @@ Funkstown:
 Galatia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2661,7 +2661,7 @@ Galatia:
 Gasburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2675,7 +2675,7 @@ Gasburg:
 Gastonia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2689,7 +2689,7 @@ Gastonia:
 Gaylord:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2703,7 +2703,7 @@ Gaylord:
 German:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2717,7 +2717,7 @@ German:
 Germfask:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2731,7 +2731,7 @@ Germfask:
 Gilbert:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2745,7 +2745,7 @@ Gilbert:
 Gladstone:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2759,7 +2759,7 @@ Gladstone:
 Glassboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2773,7 +2773,7 @@ Glassboro:
 Glenmoor:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2787,7 +2787,7 @@ Glenmoor:
 Globe:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2801,7 +2801,7 @@ Globe:
 Gloria:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2815,7 +2815,7 @@ Gloria:
 Gluck:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2829,7 +2829,7 @@ Gluck:
 Gluek:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2843,7 +2843,7 @@ Gluek:
 Goffs:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2857,7 +2857,7 @@ Goffs:
 Goodfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2871,7 +2871,7 @@ Goodfield:
 Goodview:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2885,7 +2885,7 @@ Goodview:
 Goodwine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2899,7 +2899,7 @@ Goodwine:
 Goodyear:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2913,7 +2913,7 @@ Goodyear:
 Gough:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2927,7 +2927,7 @@ Gough:
 Grace:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2941,7 +2941,7 @@ Grace:
 Graceville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2955,7 +2955,7 @@ Graceville:
 Gracey:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2969,7 +2969,7 @@ Gracey:
 Grainola:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2983,7 +2983,7 @@ Grainola:
 Grangeville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -2997,7 +2997,7 @@ Grangeville:
 Grantsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3011,7 +3011,7 @@ Grantsville:
 Grassy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3025,7 +3025,7 @@ Grassy:
 Gratz:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3039,7 +3039,7 @@ Gratz:
 Gravelly:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3053,7 +3053,7 @@ Gravelly:
 Greigsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3067,7 +3067,7 @@ Greigsville:
 Grigston:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3081,7 +3081,7 @@ Grigston:
 Haaswood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3095,7 +3095,7 @@ Haaswood:
 Hacienda:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3109,7 +3109,7 @@ Hacienda:
 Hainesburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3123,7 +3123,7 @@ Hainesburg:
 Halfway:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3137,7 +3137,7 @@ Halfway:
 Hallettsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3151,7 +3151,7 @@ Hallettsville:
 Hambleton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3165,7 +3165,7 @@ Hambleton:
 Hammon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3179,7 +3179,7 @@ Hammon:
 Hanson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3193,7 +3193,7 @@ Hanson:
 Harkeyville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3207,7 +3207,7 @@ Harkeyville:
 Harrellsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3221,7 +3221,7 @@ Harrellsville:
 Hartline:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3235,7 +3235,7 @@ Hartline:
 Hatfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3249,7 +3249,7 @@ Hatfield:
 Haxtun:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3263,7 +3263,7 @@ Haxtun:
 Haymarket:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3277,7 +3277,7 @@ Haymarket:
 Helix:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3291,7 +3291,7 @@ Helix:
 Helton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3305,7 +3305,7 @@ Helton:
 Hendrix:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3319,7 +3319,7 @@ Hendrix:
 Hennepin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3333,7 +3333,7 @@ Hennepin:
 Hercules:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3347,7 +3347,7 @@ Hercules:
 Herricks:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3361,7 +3361,7 @@ Herricks:
 Highspire:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3375,7 +3375,7 @@ Highspire:
 Hildebran:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3389,7 +3389,7 @@ Hildebran:
 Hillsdale:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3403,7 +3403,7 @@ Hillsdale:
 Hindsboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3417,7 +3417,7 @@ Hindsboro:
 Hitchland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3431,7 +3431,7 @@ Hitchland:
 Hiteman:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3445,7 +3445,7 @@ Hiteman:
 Hobson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3459,7 +3459,7 @@ Hobson:
 Holcut:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3473,7 +3473,7 @@ Holcut:
 Hometown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3487,7 +3487,7 @@ Hometown:
 Hominy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3501,7 +3501,7 @@ Hominy:
 Hordville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3515,7 +3515,7 @@ Hordville:
 Hornsby:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3529,7 +3529,7 @@ Hornsby:
 Hortense:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3543,7 +3543,7 @@ Hortense:
 Howie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3557,7 +3557,7 @@ Howie:
 Hurley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3571,7 +3571,7 @@ Hurley:
 Idanha:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3585,7 +3585,7 @@ Idanha:
 Ihlen:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3599,7 +3599,7 @@ Ihlen:
 Imbery:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3613,7 +3613,7 @@ Imbery:
 Inkom:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3627,7 +3627,7 @@ Inkom:
 Irvine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3641,7 +3641,7 @@ Irvine:
 Islandton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3655,7 +3655,7 @@ Islandton:
 Jacobus:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3669,7 +3669,7 @@ Jacobus:
 Jenners:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3683,7 +3683,7 @@ Jenners:
 Jennie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3697,7 +3697,7 @@ Jennie:
 Judith:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3711,7 +3711,7 @@ Judith:
 Kangley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3725,7 +3725,7 @@ Kangley:
 Kankakee:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3739,7 +3739,7 @@ Kankakee:
 Kathryn:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3753,7 +3753,7 @@ Kathryn:
 Keiser:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3767,7 +3767,7 @@ Keiser:
 Kemblesville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3781,7 +3781,7 @@ Kemblesville:
 Kendall:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3795,7 +3795,7 @@ Kendall:
 Kerrtown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3809,7 +3809,7 @@ Kerrtown:
 Kettle:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3823,7 +3823,7 @@ Kettle:
 Kevin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3837,7 +3837,7 @@ Kevin:
 Keweenaw:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3851,7 +3851,7 @@ Keweenaw:
 Kihei:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3865,7 +3865,7 @@ Kihei:
 Kildare:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3879,7 +3879,7 @@ Kildare:
 Kinde:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3893,7 +3893,7 @@ Kinde:
 Kingdom:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3907,7 +3907,7 @@ Kingdom:
 Kingfisher:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3921,7 +3921,7 @@ Kingfisher:
 Kinney:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3935,7 +3935,7 @@ Kinney:
 Kirksville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3949,7 +3949,7 @@ Kirksville:
 Kirwin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3963,7 +3963,7 @@ Kirwin:
 Klickitat:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3977,7 +3977,7 @@ Klickitat:
 Kobuk:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -3991,7 +3991,7 @@ Kobuk:
 Kopperl:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4005,7 +4005,7 @@ Kopperl:
 Kremlin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4019,7 +4019,7 @@ Kremlin:
 Kronborg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4033,7 +4033,7 @@ Kronborg:
 Lacon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4047,7 +4047,7 @@ Lacon:
 Ladue:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4061,7 +4061,7 @@ Ladue:
 Lajas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4075,7 +4075,7 @@ Lajas:
 Lakeville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4089,7 +4089,7 @@ Lakeville:
 Landing:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4103,7 +4103,7 @@ Landing:
 Lathrup:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4117,7 +4117,7 @@ Lathrup:
 Laupahoehoe:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4131,7 +4131,7 @@ Laupahoehoe:
 Laytonsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4145,7 +4145,7 @@ Laytonsville:
 Leavittsburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4159,7 +4159,7 @@ Leavittsburg:
 Leilani:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4173,7 +4173,7 @@ Leilani:
 Lenoir:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4187,7 +4187,7 @@ Lenoir:
 Leonardo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4201,7 +4201,7 @@ Leonardo:
 Lessley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4215,7 +4215,7 @@ Lessley:
 Liddieville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4229,7 +4229,7 @@ Liddieville:
 Lincolnwood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4243,7 +4243,7 @@ Lincolnwood:
 Lindberg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4257,7 +4257,7 @@ Lindberg:
 Lindenwood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4271,7 +4271,7 @@ Lindenwood:
 Lindsborg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4285,7 +4285,7 @@ Lindsborg:
 Lineville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4299,7 +4299,7 @@ Lineville:
 Lluveras:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4313,7 +4313,7 @@ Lluveras:
 Losantville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4327,7 +4327,7 @@ Losantville:
 Lovilia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4341,7 +4341,7 @@ Lovilia:
 Lucan:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4355,7 +4355,7 @@ Lucan:
 Ludlowville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4369,7 +4369,7 @@ Ludlowville:
 Lynchburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4383,7 +4383,7 @@ Lynchburg:
 Lynxville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4397,7 +4397,7 @@ Lynxville:
 Maben:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4411,7 +4411,7 @@ Maben:
 MacArthur:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4425,7 +4425,7 @@ MacArthur:
 Macedon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4439,7 +4439,7 @@ Macedon:
 Macksville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4453,7 +4453,7 @@ Macksville:
 Macland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4467,7 +4467,7 @@ Macland:
 Maguayo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4481,7 +4481,7 @@ Maguayo:
 Mahtomedi:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4495,7 +4495,7 @@ Mahtomedi:
 Maida:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4509,7 +4509,7 @@ Maida:
 Maiden:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4523,7 +4523,7 @@ Maiden:
 Maitland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4537,7 +4537,7 @@ Maitland:
 Mammoth:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4551,7 +4551,7 @@ Mammoth:
 Manassas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4565,7 +4565,7 @@ Manassas:
 Maricopa:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4579,7 +4579,7 @@ Maricopa:
 Markleeville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4593,7 +4593,7 @@ Markleeville:
 Marksville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4607,7 +4607,7 @@ Marksville:
 Marland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4621,7 +4621,7 @@ Marland:
 Marstons:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4635,7 +4635,7 @@ Marstons:
 Martinville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4649,7 +4649,7 @@ Martinville:
 Maryhill:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4663,7 +4663,7 @@ Maryhill:
 Mashulaville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4677,7 +4677,7 @@ Mashulaville:
 Matoaca:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4691,7 +4691,7 @@ Matoaca:
 Maugansville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4705,7 +4705,7 @@ Maugansville:
 Maunawili:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4719,7 +4719,7 @@ Maunawili:
 Mayesville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4733,7 +4733,7 @@ Mayesville:
 Mazomanie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4747,7 +4747,7 @@ Mazomanie:
 McCloud:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4761,7 +4761,7 @@ McCloud:
 McClure:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4775,7 +4775,7 @@ McClure:
 McDade:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4789,7 +4789,7 @@ McDade:
 McEwen:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4803,7 +4803,7 @@ McEwen:
 McKeesport:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4817,7 +4817,7 @@ McKeesport:
 McNary:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4831,7 +4831,7 @@ McNary:
 Melstone:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4845,7 +4845,7 @@ Melstone:
 Mentasta:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4859,7 +4859,7 @@ Mentasta:
 Mentmore:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4873,7 +4873,7 @@ Mentmore:
 Merchantville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4887,7 +4887,7 @@ Merchantville:
 Merlin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4901,7 +4901,7 @@ Merlin:
 Merom:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4915,7 +4915,7 @@ Merom:
 Mesic:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4929,7 +4929,7 @@ Mesic:
 Micanopy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4943,7 +4943,7 @@ Micanopy:
 Michiana:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4957,7 +4957,7 @@ Michiana:
 Mifflinburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4971,7 +4971,7 @@ Mifflinburg:
 Mifflintown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4985,7 +4985,7 @@ Mifflintown:
 Milaca:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -4999,7 +4999,7 @@ Milaca:
 Milford:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5013,7 +5013,7 @@ Milford:
 Millbury:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5027,7 +5027,7 @@ Millbury:
 Moark:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5041,7 +5041,7 @@ Moark:
 Moberly:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5055,7 +5055,7 @@ Moberly:
 Mobridge:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5069,7 +5069,7 @@ Mobridge:
 Model:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5083,7 +5083,7 @@ Model:
 Mogadore:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5097,7 +5097,7 @@ Mogadore:
 Mogote:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5111,7 +5111,7 @@ Mogote:
 Monson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5125,7 +5125,7 @@ Monson:
 Monticello:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5139,7 +5139,7 @@ Monticello:
 Montreal:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5153,7 +5153,7 @@ Montreal:
 Moonachie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5167,7 +5167,7 @@ Moonachie:
 Morris:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5181,7 +5181,7 @@ Morris:
 Mosinee:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5195,7 +5195,7 @@ Mosinee:
 Mosquito:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5209,7 +5209,7 @@ Mosquito:
 Muleshoe:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5223,7 +5223,7 @@ Muleshoe:
 Mullica:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5237,7 +5237,7 @@ Mullica:
 Munsons:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5251,7 +5251,7 @@ Munsons:
 Murchison:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5265,7 +5265,7 @@ Murchison:
 Musicks:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5279,7 +5279,7 @@ Musicks:
 Natural:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5293,7 +5293,7 @@ Natural:
 Neibert:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5307,7 +5307,7 @@ Neibert:
 Nemacolin:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5321,7 +5321,7 @@ Nemacolin:
 Neshkoro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5335,7 +5335,7 @@ Neshkoro:
 Newcomb:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5349,7 +5349,7 @@ Newcomb:
 Newfields:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5363,7 +5363,7 @@ Newfields:
 Nicut:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5377,7 +5377,7 @@ Nicut:
 Nimmons:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5391,7 +5391,7 @@ Nimmons:
 Noonday:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5405,7 +5405,7 @@ Noonday:
 Northgate:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5419,7 +5419,7 @@ Northgate:
 Norvelt:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5433,7 +5433,7 @@ Norvelt:
 Noxapater:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5447,7 +5447,7 @@ Noxapater:
 Nuevo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5461,7 +5461,7 @@ Nuevo:
 Ogilvie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5475,7 +5475,7 @@ Ogilvie:
 Ohoopee:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5489,7 +5489,7 @@ Ohoopee:
 Okabena:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5503,7 +5503,7 @@ Okabena:
 Onaga:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5517,7 +5517,7 @@ Onaga:
 Ooltewah:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5531,7 +5531,7 @@ Ooltewah:
 Ophir:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5545,7 +5545,7 @@ Ophir:
 Orangeburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5559,7 +5559,7 @@ Orangeburg:
 Orason:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5573,7 +5573,7 @@ Orason:
 Oriole:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5587,7 +5587,7 @@ Oriole:
 Ossipee:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5601,7 +5601,7 @@ Ossipee:
 Ovalo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5615,7 +5615,7 @@ Ovalo:
 Oyens:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5629,7 +5629,7 @@ Oyens:
 Pablo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5643,7 +5643,7 @@ Pablo:
 Paige:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5657,7 +5657,7 @@ Paige:
 Pamelia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5671,7 +5671,7 @@ Pamelia:
 Parole:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5685,7 +5685,7 @@ Parole:
 Pasatiempo:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5699,7 +5699,7 @@ Pasatiempo:
 Peacock:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5713,7 +5713,7 @@ Peacock:
 Pearce:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5727,7 +5727,7 @@ Pearce:
 Peconic:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5741,7 +5741,7 @@ Peconic:
 Peden:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5755,7 +5755,7 @@ Peden:
 Pettigrew:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5769,7 +5769,7 @@ Pettigrew:
 Pinesdale:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5783,7 +5783,7 @@ Pinesdale:
 Pittsburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5797,7 +5797,7 @@ Pittsburg:
 Placida:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5811,7 +5811,7 @@ Placida:
 Pleasant:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5825,7 +5825,7 @@ Pleasant:
 Plessis:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5839,7 +5839,7 @@ Plessis:
 Plumerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5853,7 +5853,7 @@ Plumerville:
 Pocasset:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5867,7 +5867,7 @@ Pocasset:
 Pocopson:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5881,7 +5881,7 @@ Pocopson:
 Poipu:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5895,7 +5895,7 @@ Poipu:
 Pomaria:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5909,7 +5909,7 @@ Pomaria:
 Portal:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5923,7 +5923,7 @@ Portal:
 Portola:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5937,7 +5937,7 @@ Portola:
 Potosi:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5951,7 +5951,7 @@ Potosi:
 Potterville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5965,7 +5965,7 @@ Potterville:
 Poyen:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5979,7 +5979,7 @@ Poyen:
 Purple:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -5993,7 +5993,7 @@ Purple:
 Quantico:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6007,7 +6007,7 @@ Quantico:
 Rabbit:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6021,7 +6021,7 @@ Rabbit:
 Ranchester:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6035,7 +6035,7 @@ Ranchester:
 Rancocas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6049,7 +6049,7 @@ Rancocas:
 Random:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6063,7 +6063,7 @@ Random:
 Readsboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6077,7 +6077,7 @@ Readsboro:
 Redbank:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6091,7 +6091,7 @@ Redbank:
 Reserve:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6105,7 +6105,7 @@ Reserve:
 Retsof:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6119,7 +6119,7 @@ Retsof:
 Reyno:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6133,7 +6133,7 @@ Reyno:
 Ribera:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6147,7 +6147,7 @@ Ribera:
 Roane:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6161,7 +6161,7 @@ Roane:
 Rockport:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6175,7 +6175,7 @@ Rockport:
 Roeville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6189,7 +6189,7 @@ Roeville:
 Rogue:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6203,7 +6203,7 @@ Rogue:
 Rosenberg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6217,7 +6217,7 @@ Rosenberg:
 Rosser:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6231,7 +6231,7 @@ Rosser:
 Rough:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6245,7 +6245,7 @@ Rough:
 Roxboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6259,7 +6259,7 @@ Roxboro:
 Ruckersville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6273,7 +6273,7 @@ Ruckersville:
 Rutherford:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6287,7 +6287,7 @@ Rutherford:
 Sagerton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6301,7 +6301,7 @@ Sagerton:
 Samuels:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6315,7 +6315,7 @@ Samuels:
 Sanctuary:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6329,7 +6329,7 @@ Sanctuary:
 Sands:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6343,7 +6343,7 @@ Sands:
 Sarcoxie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6357,7 +6357,7 @@ Sarcoxie:
 Sargents:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6371,7 +6371,7 @@ Sargents:
 Sasakwa:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6385,7 +6385,7 @@ Sasakwa:
 Sawpit:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6399,7 +6399,7 @@ Sawpit:
 Scandinavia:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6413,7 +6413,7 @@ Scandinavia:
 Schiller:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6427,7 +6427,7 @@ Schiller:
 Schoolcraft:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6441,7 +6441,7 @@ Schoolcraft:
 Scioto:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6455,7 +6455,7 @@ Scioto:
 Scottsmoor:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6469,7 +6469,7 @@ Scottsmoor:
 Seatonville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6483,7 +6483,7 @@ Seatonville:
 Seeley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6497,7 +6497,7 @@ Seeley:
 Seiling:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6511,7 +6511,7 @@ Seiling:
 Seward:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6525,7 +6525,7 @@ Seward:
 Sharon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6539,7 +6539,7 @@ Sharon:
 Shauck:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6553,7 +6553,7 @@ Shauck:
 Shelbiana:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6567,7 +6567,7 @@ Shelbiana:
 Shelbyville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6581,7 +6581,7 @@ Shelbyville:
 Shellsburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6595,7 +6595,7 @@ Shellsburg:
 Sherrill:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6609,7 +6609,7 @@ Sherrill:
 Shingler:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6623,7 +6623,7 @@ Shingler:
 Shumway:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6637,7 +6637,7 @@ Shumway:
 Silas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6651,7 +6651,7 @@ Silas:
 Silerton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6665,7 +6665,7 @@ Silerton:
 Silva:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6679,7 +6679,7 @@ Silva:
 Siren:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6693,7 +6693,7 @@ Siren:
 Sisters:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6707,7 +6707,7 @@ Sisters:
 Smoketown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6721,7 +6721,7 @@ Smoketown:
 Sodaville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6735,7 +6735,7 @@ Sodaville:
 Soldier:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6749,7 +6749,7 @@ Soldier:
 Sontag:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6763,7 +6763,7 @@ Sontag:
 Southfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6777,7 +6777,7 @@ Southfield:
 Spencerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6791,7 +6791,7 @@ Spencerville:
 Spotswood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6805,7 +6805,7 @@ Spotswood:
 Spread:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6819,7 +6819,7 @@ Spread:
 Springerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6833,7 +6833,7 @@ Springerville:
 Springhill:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6847,7 +6847,7 @@ Springhill:
 Stanleyville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6861,7 +6861,7 @@ Stanleyville:
 Starks:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6875,7 +6875,7 @@ Starks:
 Stigler:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6889,7 +6889,7 @@ Stigler:
 Stilwell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6903,7 +6903,7 @@ Stilwell:
 Stockertown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6917,7 +6917,7 @@ Stockertown:
 Stockman:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6931,7 +6931,7 @@ Stockman:
 Stockwell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6945,7 +6945,7 @@ Stockwell:
 Stokes:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6959,7 +6959,7 @@ Stokes:
 Sugarville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6973,7 +6973,7 @@ Sugarville:
 Sultan:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -6987,7 +6987,7 @@ Sultan:
 Sumas:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7001,7 +7001,7 @@ Sumas:
 Sundown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7015,7 +7015,7 @@ Sundown:
 Sunshine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7029,7 +7029,7 @@ Sunshine:
 Superior:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7043,7 +7043,7 @@ Superior:
 Sussex:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7057,7 +7057,7 @@ Sussex:
 Sweatman:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7071,7 +7071,7 @@ Sweatman:
 Swisshome:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7085,7 +7085,7 @@ Swisshome:
 Swormville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7099,7 +7099,7 @@ Swormville:
 Tallmadge:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7113,7 +7113,7 @@ Tallmadge:
 Tansboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7127,7 +7127,7 @@ Tansboro:
 Tariffville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7141,7 +7141,7 @@ Tariffville:
 Terrell:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7155,7 +7155,7 @@ Terrell:
 Texasville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7169,7 +7169,7 @@ Texasville:
 Thrall:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7183,7 +7183,7 @@ Thrall:
 Tilghmanton:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7197,7 +7197,7 @@ Tilghmanton:
 Tillman:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7211,7 +7211,7 @@ Tillman:
 Timberon:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7225,7 +7225,7 @@ Timberon:
 Tippecanoe:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7239,7 +7239,7 @@ Tippecanoe:
 Tokeland:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7253,7 +7253,7 @@ Tokeland:
 Tolstoy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7267,7 +7267,7 @@ Tolstoy:
 Tomales:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7281,7 +7281,7 @@ Tomales:
 Tomkins:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7295,7 +7295,7 @@ Tomkins:
 Torrington:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7309,7 +7309,7 @@ Torrington:
 Touhy:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7323,7 +7323,7 @@ Touhy:
 Tradewinds:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7337,7 +7337,7 @@ Tradewinds:
 Trail:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7351,7 +7351,7 @@ Trail:
 Traver:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7365,7 +7365,7 @@ Traver:
 Tyler:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7379,7 +7379,7 @@ Tyler:
 Tysons:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7393,7 +7393,7 @@ Tysons:
 Umpqua:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7407,7 +7407,7 @@ Umpqua:
 Uncertain:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7421,7 +7421,7 @@ Uncertain:
 Upham:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7435,7 +7435,7 @@ Upham:
 Uvalda:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7449,7 +7449,7 @@ Uvalda:
 Vacherie:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7463,7 +7463,7 @@ Vacherie:
 Vails:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7477,7 +7477,7 @@ Vails:
 Victorville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7491,7 +7491,7 @@ Victorville:
 Voorhees:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7505,7 +7505,7 @@ Voorhees:
 Waimea:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7519,7 +7519,7 @@ Waimea:
 Wainscott:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7533,7 +7533,7 @@ Wainscott:
 Waipahu:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7547,7 +7547,7 @@ Waipahu:
 Wakeman:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7561,7 +7561,7 @@ Wakeman:
 Waldenburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7575,7 +7575,7 @@ Waldenburg:
 Wando:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7589,7 +7589,7 @@ Wando:
 Wappingers:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7603,7 +7603,7 @@ Wappingers:
 Warrenville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7617,7 +7617,7 @@ Warrenville:
 Wattsville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7631,7 +7631,7 @@ Wattsville:
 Waucousta:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7645,7 +7645,7 @@ Waucousta:
 Waukeenah:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7659,7 +7659,7 @@ Waukeenah:
 Webster:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7673,7 +7673,7 @@ Webster:
 Weleetka:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7687,7 +7687,7 @@ Weleetka:
 Wells:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7701,7 +7701,7 @@ Wells:
 Wesley:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7715,7 +7715,7 @@ Wesley:
 Westerville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7729,7 +7729,7 @@ Westerville:
 Westfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7743,7 +7743,7 @@ Westfield:
 Whiteriver:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7757,7 +7757,7 @@ Whiteriver:
 Whitethorn:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7771,7 +7771,7 @@ Whitethorn:
 Wiconisco:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7785,7 +7785,7 @@ Wiconisco:
 Wilbraham:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7799,7 +7799,7 @@ Wilbraham:
 Wilkesboro:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7813,7 +7813,7 @@ Wilkesboro:
 Wilkinsburg:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7827,7 +7827,7 @@ Wilkinsburg:
 Willow:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7841,7 +7841,7 @@ Willow:
 Wilseyville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7855,7 +7855,7 @@ Wilseyville:
 Windhorst:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7869,7 +7869,7 @@ Windhorst:
 Winfield:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7883,7 +7883,7 @@ Winfield:
 Winooski:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7897,7 +7897,7 @@ Winooski:
 Winthrop:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7911,7 +7911,7 @@ Winthrop:
 Woodbine:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7925,7 +7925,7 @@ Woodbine:
 Woonsocket:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7939,7 +7939,7 @@ Woonsocket:
 Wyatt:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7953,7 +7953,7 @@ Wyatt:
 Wyldwood:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7967,7 +7967,7 @@ Wyldwood:
 Yadkinville:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7981,7 +7981,7 @@ Yadkinville:
 Yankeetown:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -7995,7 +7995,7 @@ Yankeetown:
 Yscloskey:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8009,7 +8009,7 @@ Yscloskey:
 area2:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8023,7 +8023,7 @@ area2:
 area3:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8037,7 +8037,7 @@ area3:
 area4:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8051,7 +8051,7 @@ area4:
 area5:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8065,7 +8065,7 @@ area5:
 area6:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8079,7 +8079,7 @@ area6:
 house1:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8093,7 +8093,7 @@ house1:
 house10:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8107,7 +8107,7 @@ house10:
 house11:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8121,7 +8121,7 @@ house11:
 house12:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8135,7 +8135,7 @@ house12:
 house13:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8149,7 +8149,7 @@ house13:
 house14:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8163,7 +8163,7 @@ house14:
 house15:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8177,7 +8177,7 @@ house15:
 house16:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8191,7 +8191,7 @@ house16:
 house17:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8205,7 +8205,7 @@ house17:
 house18:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8219,7 +8219,7 @@ house18:
 house19:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8233,7 +8233,7 @@ house19:
 house2:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8247,7 +8247,7 @@ house2:
 house20:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8261,7 +8261,7 @@ house20:
 house21:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8275,7 +8275,7 @@ house21:
 house22:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8289,7 +8289,7 @@ house22:
 house23:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8303,7 +8303,7 @@ house23:
 house24:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8317,7 +8317,7 @@ house24:
 house25:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8331,7 +8331,7 @@ house25:
 house26:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8345,7 +8345,7 @@ house26:
 house27:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8359,7 +8359,7 @@ house27:
 house28:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8373,7 +8373,7 @@ house28:
 house29:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8387,7 +8387,7 @@ house29:
 house3:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8401,7 +8401,7 @@ house3:
 house30:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8415,7 +8415,7 @@ house30:
 house31:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8429,7 +8429,7 @@ house31:
 house32:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8443,7 +8443,7 @@ house32:
 house33:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8457,7 +8457,7 @@ house33:
 house34:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8471,7 +8471,7 @@ house34:
 house35:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8485,7 +8485,7 @@ house35:
 house36:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8499,7 +8499,7 @@ house36:
 house37:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8513,7 +8513,7 @@ house37:
 house38:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8527,7 +8527,7 @@ house38:
 house39:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8541,7 +8541,7 @@ house39:
 house4:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8555,7 +8555,7 @@ house4:
 house40:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8569,7 +8569,7 @@ house40:
 house41:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8583,7 +8583,7 @@ house41:
 house42:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8597,7 +8597,7 @@ house42:
 house43:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8611,7 +8611,7 @@ house43:
 house44:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8625,7 +8625,7 @@ house44:
 house45:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8639,7 +8639,7 @@ house45:
 house46:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8653,7 +8653,7 @@ house46:
 house47:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8667,7 +8667,7 @@ house47:
 house48:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8681,7 +8681,7 @@ house48:
 house49:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8695,7 +8695,7 @@ house49:
 house5:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8709,7 +8709,7 @@ house5:
 house50:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8723,7 +8723,7 @@ house50:
 house51:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8737,7 +8737,7 @@ house51:
 house52:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8751,7 +8751,7 @@ house52:
 house53:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8765,7 +8765,7 @@ house53:
 house54:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8779,7 +8779,7 @@ house54:
 house55:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8793,7 +8793,7 @@ house55:
 house56:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8807,7 +8807,7 @@ house56:
 house57:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8821,7 +8821,7 @@ house57:
 house58:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8835,7 +8835,7 @@ house58:
 house59:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8849,7 +8849,7 @@ house59:
 house6:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8863,7 +8863,7 @@ house6:
 house60:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8877,7 +8877,7 @@ house60:
 house61:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8891,7 +8891,7 @@ house61:
 house62:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8905,7 +8905,7 @@ house62:
 house63:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8919,7 +8919,7 @@ house63:
 house64:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8933,7 +8933,7 @@ house64:
 house65:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8947,7 +8947,7 @@ house65:
 house66:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8961,7 +8961,7 @@ house66:
 house67:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8975,7 +8975,7 @@ house67:
 house68:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -8989,7 +8989,7 @@ house68:
 house69:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9003,7 +9003,7 @@ house69:
 house7:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9017,7 +9017,7 @@ house7:
 house70:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9031,7 +9031,7 @@ house70:
 house71:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9045,7 +9045,7 @@ house71:
 house72:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9059,7 +9059,7 @@ house72:
 house73:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9073,7 +9073,7 @@ house73:
 house74:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9087,7 +9087,7 @@ house74:
 house75:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9101,7 +9101,7 @@ house75:
 house76:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9115,7 +9115,7 @@ house76:
 house77:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9129,7 +9129,7 @@ house77:
 house78:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9143,7 +9143,7 @@ house78:
 house79:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9157,7 +9157,7 @@ house79:
 house8:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9171,7 +9171,7 @@ house8:
 house80:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9185,7 +9185,7 @@ house80:
 house81:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9199,7 +9199,7 @@ house81:
 house82:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9213,7 +9213,7 @@ house82:
 house9:
   dataset: matterport
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9227,7 +9227,7 @@ house9:
 space2:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9241,7 +9241,7 @@ space2:
 space3:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9255,7 +9255,7 @@ space3:
 space4:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9269,7 +9269,7 @@ space4:
 space5:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9283,7 +9283,7 @@ space5:
 space6:
   dataset: stanford
   has_semantics: false
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:
@@ -9297,7 +9297,7 @@ space6:
 space7:
   dataset: stanford
   has_semantics: true
-  plans:
+  floors:
     0:
       floor_height: 0.0
       orientation:

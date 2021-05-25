@@ -8,7 +8,7 @@ import yaml
 class GibsonEnvironmentsData:
     KEY_HAS_SEMANTICS = 'has_semantics'
     KEY_DATASET = 'dataset'
-    KEY_PLANS = 'plans'
+    KEY_FLOORS = 'floors'
     KEY_POSITION = 'position'
     KEY_ORIENTATION = 'orientation'
     KEY_FLOOR_HEIGHT = 'floor_height'
