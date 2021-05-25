@@ -63,6 +63,7 @@ setup(
         'gibson>=0.7',
         'PyYaml',
         'termcolor',
+        'trimesh',
         'shapely'
     ],
     entry_points={
