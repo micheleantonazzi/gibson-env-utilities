@@ -16,7 +16,6 @@ output:
 - nonviz_sensor
 - rgb_filled
 - depth
-- semantics
 random:
   random_init_rot_range:
   - -0.1
@@ -32,7 +31,7 @@ random:
   - 0.1
   random_initial_pose: false
   random_target_pose: false
-resolution: 512
+resolution: 256
 semantic_color: 2
 semantic_source: 2
 show_diagnostics: false
@@ -50,7 +49,6 @@ target_pos:
 ui_components:
 - RGB_FILLED
 - DEPTH
-- SEMANTICS
-ui_num: 3
+ui_num: 2
 use_filler: true
 verbose: false

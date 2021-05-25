@@ -137,7 +137,7 @@ Allensville:
       position:
       - 3.0
       - 7.0
-      - 0.0
+      - 0.05
 Almena:
   dataset: stanford
   has_semantics: false
