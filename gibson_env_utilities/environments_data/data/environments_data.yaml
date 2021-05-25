@@ -8089,7 +8089,7 @@ house1:
       position:
       - 0.0
       - 0.0
-      - 0.2
+      - 0.01
 house10:
   dataset: matterport
   has_semantics: true
