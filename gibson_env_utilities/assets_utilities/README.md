@@ -1,13 +1,17 @@
-# Environments data
-This module implements a series of operations to retrieve and use some useful information about the worlds in the Gibson's dataset.
+# Assets utilities
+
+This module manages Gibson's assets (the environments' dataset in particular) and offers a lot of utilities to manipulate them.
+
+## Environments data
+*GibsonEnvironmentsData* implements a series of operations to retrieve and use some useful information about the worlds in the Gibson's dataset.
 This information includes:
 * the environment's name
-* if the environment is semantically annotated  
+* if the environment is semantically annotated
 * for each floor:
     * the approximate height of the floor
     * the starting position
     * the starting orientation
-  
+
 The environments' data are organized in a dictionary, as shown below:
 
 ```
@@ -21,3 +25,8 @@ The environments' data are organized in a dictionary, as shown below:
       |_[orientation] -> list (the starting orientation expressed in gradients x, y, z)
 
 ```
+
+## Assets utilities
+GibsonAssetsUtilities defines useful methods for:
+* save and load assets files from disk
+* generate floor map starting from a wavefront file

@@ -1,6 +1,6 @@
 import os.path
-from typing import Dict, Set, Iterable, KeysView
 import copy
+from typing import Dict, KeysView
 
 import yaml
 
@@ -50,4 +50,3 @@ class GibsonEnvironmentsData:
         :rtype: KeysView[str]
         """
         return self._environments_data.keys()
-
