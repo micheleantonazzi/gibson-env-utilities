@@ -8,14 +8,6 @@ from gibson.envs.mobile_robots_env import TurtlebotNavigateEnv
 
 from gibson_env_utilities.gibson_run_config import GibsonConfigRun, EnvironmentNotSemanticallyAnnotatedException
 
-
-try:
-
-    AssetsManager().get_assets_path()
-except AssetsPathNotSetException:
-    AssetsManager().set_assets_path(os.path.join(os.path.dirname(__file__), '..', 'gibson_env_utilities', 'data')).save_assets_information()
-
-
 def test_constructor():
     config = GibsonConfigRun(simulation_env=TurtlebotNavigateEnv, world_name='Allensville', floor=0)
     assert 'semantics' not in config.get_parameters()['output']

@@ -12,12 +12,7 @@ from gibson_env_utilities.gibson_environments_data import GibsonEnvironmentsData
 
 class GibsonAssetsUtilities:
     def __init__(self):
-        try:
-            self._assets_path = AssetsManager().get_assets_path()
-        except AssetsPathNotSetException:
-            print(colored('Gibson assets path is not correctly set! It is set to an example directory, used only for testing! ', 'red'))
-            self._assets_path = os.path.join(os.path.dirname(__file__), 'data')
-
+        self._assets_path = AssetsManager().get_assets_path()
         self._environments_data = GibsonEnvironmentsData()
 
     def load_obj(self, environment_name: str) -> trimesh.Trimesh:
