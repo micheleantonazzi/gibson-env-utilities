@@ -1,4 +1,5 @@
-gibson_env_utilities/data/*
+gibson_env_utilities/data/gibson_config_file_temp.yaml
+gibson_env_utilities/data/assets_test
 .idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
