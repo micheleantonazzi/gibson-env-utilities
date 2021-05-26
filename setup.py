@@ -64,7 +64,8 @@ setup(
         'termcolor',
         'trimesh',
         'shapely',
-        'numpy'
+        'numpy',
+        'requests'
     ],
     entry_points={
         'console_scripts': [
