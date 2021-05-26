@@ -1,5 +1,6 @@
+import copy
 import os
-from typing import Type
+from typing import Type, Dict
 
 import yaml
 from gibson.envs.env_modalities import BaseRobotEnv
@@ -128,3 +129,10 @@ class GibsonConfigRun:
             yaml.dump(self._gibson_config_parameters, gibson_config_file_temp, default_flow_style=False)
 
         return save_path
+
+    def get_parameters(self) -> Dict:
+        """
+        Returns the configuration parameters set with this class
+        :return: a dictionary with the configuration parameters
+        """
+        return copy.deepcopy(self._gibson_config_parameters)
