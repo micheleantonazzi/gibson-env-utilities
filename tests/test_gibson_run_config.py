@@ -3,9 +3,17 @@ import os
 
 import pytest
 import yaml
+from gibson.assets.assets_manager import AssetsManager, AssetsPathNotSetException
 from gibson.envs.mobile_robots_env import TurtlebotNavigateEnv
 
 from gibson_env_utilities.gibson_run_config import GibsonConfigRun, EnvironmentNotSemanticallyAnnotatedException
+
+
+try:
+
+    AssetsManager().get_assets_path()
+except AssetsPathNotSetException:
+    AssetsManager().set_assets_path(os.path.join(os.path.dirname(__file__), '..', 'gibson_env_utilities', 'data')).save_assets_information()
 
 
 def test_constructor():
