@@ -41,3 +41,8 @@ The environments' data are organized in a dictionary, as shown below:
 GibsonAssetsUtilities defines useful methods for:
 * save and load assets files from disk
 * generate floor map starting from a wavefront file
+
+## Config run
+*GibsonConfigRun* is a utility which helps users to configure Gibson to perform a simulation run.
+This class creates automatically a configuration file used by Gibson Environment to read the simulation parameters.
+You can see this class in action in the correspondent examples 
