@@ -45,4 +45,4 @@ GibsonAssetsUtilities defines useful methods for:
 ## Config run
 *GibsonConfigRun* is a utility which helps users to configure Gibson to perform a simulation run.
 This class creates automatically a configuration file used by Gibson Environment to read the simulation parameters.
-You can see this class in action in the correspondent examples 
+You can see this class in action in the correspondent examples ([1](examples/launch_gibson_turtlebot.py) and [2](examples/launch_gibson_turtlebot_no_physics.py)).
