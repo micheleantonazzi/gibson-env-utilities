@@ -44,7 +44,7 @@ class GibsonAssetsUtilities:
     def _get_file_name(self, env_name: str, floor: int) -> str:
         return env_name + '_floor_' + str(floor)
 
-    def create_floor_map(self, env_name: str, floor: int, image_size: Tuple[int, int] = (640, 480), floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
+    def create_floor_map(self, env_name: str, floor: int, image_size: Tuple[int, int] = (1280, 1280), floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
         """
         Generates the map of the environment at the given floor and the relative metadata.
         The floor map is a png image, while metadata indicates:
@@ -76,7 +76,7 @@ class GibsonAssetsUtilities:
         plt.axis('off')
 
         for slice in slices_2D:
-            slice.plot_entities(show=False, annotations=True, color='k')
+            slice.plot_entities(show=False, annotations=False, color='k')
 
         fig: Figure = plt.gcf()
         fig.set_size_inches(image_size[0] / 100.0, image_size[1] / 100.0)
@@ -85,14 +85,15 @@ class GibsonAssetsUtilities:
         # Extract metadata
         ax = fig.gca()
         x_0, y_0 = ax.transData.transform((0.0, 0.0))
-        x_1, y_1 = ax.transData.transform((1.0, 0.0))
-        scale = abs(x_0 - x_1) / 100
+        inv = ax.transData.inverted()
+        inv_x_0, _ = inv.transform((0, 0))
+        inv_x_1, _ = inv.transform((1, 0))
+        scale = abs(inv_x_0 - inv_x_1)
         metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
-        print(metadata)
 
         if save_to_image:
             file_name = self._get_file_name(env_name, floor)
-            fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', file_name + '.png'), dpi=1000)
+            fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', file_name + '.png'), dpi=fig.dpi)
             with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
                 yaml.dump(metadata, f, default_flow_style=False)
 
