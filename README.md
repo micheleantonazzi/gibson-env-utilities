@@ -40,7 +40,9 @@ The environments' data are organized in a dictionary, as shown below:
 ## Assets utilities
 GibsonAssetsUtilities defines useful methods for:
 * save and load assets files from disk
-* generate floor map starting from a wavefront file
+* generate floor maps (and their metadata) starting from a wavefront file. The map metadata includes:
+  * the origin coordinates in pixel
+  * the scale to convert a pixel to the real world distance it covers
 
 ## Config run
 *GibsonConfigRun* is a utility which helps users to configure Gibson to perform a simulation run.
