@@ -16,9 +16,9 @@ def test_get_semantic_environments():
 
 def test_get_environments_name():
     data = GibsonEnvironmentsData()
-    assert len(data.get_environment_names()) == 665
+    assert len(data.get_env_names()) == 665
 
 
 def test_create_floor_map():
-    GibsonAssetsUtilities().create_floor_map(environment_name='house1', floor=0, save_to_image=True)
-    GibsonAssetsUtilities().create_floor_map(environment_name='space7', floor=0, save_to_image=True)
+    GibsonAssetsUtilities().create_floor_map(env_name='house1', floor=0, save_to_image=True)
+    GibsonAssetsUtilities().create_floor_map(env_name='space7', floor=0, save_to_image=True)

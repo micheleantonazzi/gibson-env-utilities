@@ -34,9 +34,9 @@ class GibsonConfigRun:
         # Set the simulation environment
         self._gibson_config_parameters['envname'] = simulation_env.__name__
 
-        self._environment_name = world_name
+        self._env_name = world_name
 
-        env_data = self._gibson_environments_data.get_environment_data(environment_name=world_name)
+        env_data = self._gibson_environments_data.get_environment_data(env_name=world_name)
         self._gibson_config_parameters['model_id'] = world_name
         self._gibson_config_parameters['initial_pos'] = env_data[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_POSITION]
         self._gibson_config_parameters['initial_orn'] = env_data[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_ORIENTATION]
@@ -82,10 +82,10 @@ class GibsonConfigRun:
         :raise EnvironmentNotSemanticallyAnnotatedException if the environment is not semantically annotated
         :return: GibsonConfigRun
         """
-        env_data = self._gibson_environments_data.get_environment_data(environment_name=self._environment_name)
+        env_data = self._gibson_environments_data.get_environment_data(env_name=self._env_name)
 
         if not env_data[GibsonEnvironmentsData.KEY_HAS_SEMANTICS]:
-            print(colored('The environment \'{0}\' is not semantically annotated, you cannot show semantic data!!'.format(self._environment_name), 'red'))
+            print(colored('The environment \'{0}\' is not semantically annotated, you cannot show semantic data!!'.format(self._env_name), 'red'))
             raise EnvironmentNotSemanticallyAnnotatedException()
 
         self._gibson_config_parameters['semantic_color'] = 1
@@ -106,10 +106,10 @@ class GibsonConfigRun:
         :raise EnvironmentNotSemanticallyAnnotatedException if the environment is not semantically annotated
         :return: GibsonConfigRun
         """
-        env_data = self._gibson_environments_data.get_environment_data(environment_name=self._environment_name)
+        env_data = self._gibson_environments_data.get_environment_data(env_name=self._env_name)
 
         if not env_data[GibsonEnvironmentsData.KEY_HAS_SEMANTICS]:
-            print(colored('The environment \'{0}\' is not semantically annotated, you cannot show semantic data!!'.format(self._environment_name), 'red'))
+            print(colored('The environment \'{0}\' is not semantically annotated, you cannot show semantic data!!'.format(self._env_name), 'red'))
             raise EnvironmentNotSemanticallyAnnotatedException()
 
         if env_data[GibsonEnvironmentsData.KEY_DATASET] == 'stanford':

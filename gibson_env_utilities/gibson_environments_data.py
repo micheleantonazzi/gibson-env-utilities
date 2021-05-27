@@ -17,15 +17,15 @@ class GibsonEnvironmentsData:
         with open(os.path.join(os.path.dirname(__file__), 'data', 'environments_data.yaml'), mode='r') as f:
             self._environments_data: Dict = yaml.load(f, Loader=yaml.FullLoader)
 
-    def get_environment_data(self, environment_name: str) -> Dict:
+    def get_environment_data(self, env_name: str) -> Dict:
         """
         The data relative to the given environment
-        :param environment_name: the name of the environment
-        :type environment_name: str
+        :param env_name: the name of the environment
+        :type env_name: str
         :return: the data of the environment with the given name
         :rtype: Dict
         """
-        return copy.deepcopy(self._environments_data[environment_name])
+        return copy.deepcopy(self._environments_data[env_name])
 
     def get_environments_data(self) -> Dict:
         """
@@ -43,7 +43,7 @@ class GibsonEnvironmentsData:
         """
         return copy.deepcopy({key: value for key, value in self._environments_data.items() if value[GibsonEnvironmentsData.KEY_HAS_SEMANTICS]})
 
-    def get_environment_names(self) -> KeysView:
+    def get_env_names(self) -> KeysView:
         """
         Returns the environments' names
         :return: the environments' names
