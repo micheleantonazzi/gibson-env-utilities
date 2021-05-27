@@ -34,7 +34,6 @@ The environments' data are organized in a dictionary, as shown below:
       |_[floor_height] -> float
       |_[position] -> list (the starting position x, y, z)
       |_[orientation] -> list (the starting orientation expressed in gradients x, y, z)
-
 ```
 
 ## Assets utilities
