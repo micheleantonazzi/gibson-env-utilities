@@ -1,9 +1,12 @@
 import os
 from functools import reduce
+from typing import Tuple
 
+import yaml
+from matplotlib.figure import Figure
 import numpy as np
 import trimesh
-from gibson.assets.assets_manager import AssetsManager, AssetsPathNotSetException
+from gibson.assets.assets_manager import AssetsManager
 from matplotlib import pyplot as plt
 from termcolor import colored
 
@@ -37,14 +40,20 @@ class GibsonAssetsUtilities:
 
         return mesh
 
-    def create_floor_map(self, environment_name: str, floor: int, floor_offset: float = 0.05, height: float = 1.0, step: float = 0.1, save_to_image: bool = False):
+    def create_floor_map(self, environment_name: str, floor: int, image_size: Tuple[int, int] = (640, 480), floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
         """
-        Generates the map of the environment at the given floor. The mesh is sliced at multiple heights.
+        Generates the map of the environment at the given floor and the relative metadata.
+        The floor map is a png image, while metadata indicates:
+            1) the pixel coordinates to the origin point (0.0, 0.0)
+            2) the scale to map a pixel to the real-world distance it covers
+        To generate the map, the mesh is sliced at multiple heights.
         The cuts begin from the floor offset and they are made at each step up to the maximum height.
         :param environment_name:
         :param floor:
         :param floor_offset: the offset to start cutting the mesh (the first cross section is performed at [floor_height + floor_offset]
         :type floor_offset: float
+        :param image_size: the size of the map image in pixel
+        :type image_size: Tuple[int, int]
         :param height: the maximum height to stop cutting the mesh. This means that the last mesh cut has is made at [floor_height + floor_offset + height]
         :type height: float
         :param step: the step used to cut the environment's mesh
@@ -61,8 +70,24 @@ class GibsonAssetsUtilities:
 
         plt.close()
         plt.axis('off')
+
         for slice in slices_2D:
             slice.plot_entities(show=False, annotations=True, color='k')
 
+        fig: Figure = plt.gcf()
+        fig.set_size_inches(image_size[0] / 100.0, image_size[1] / 100.0)
+        fig.canvas.draw()
+
+        # Extract metadata
+        ax = fig.gca()
+        x_0, y_0 = ax.transData.transform((0.0, 0.0))
+        x_1, y_1 = ax.transData.transform((1.0, 0.0))
+        scale = abs(x_0 - x_1) / 100
+        metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
+        print(metadata)
+
         if save_to_image:
-            plt.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', environment_name + '_floor_' + str(floor) + '.png'))
+            file_name = environment_name + '_floor_' + str(floor)
+            fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', file_name + '.png'), dpi=1000)
+            with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
+                yaml.dump(metadata, f, default_flow_style=False)
