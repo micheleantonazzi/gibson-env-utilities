@@ -11,3 +11,12 @@ def test_load_obj():
 
     with pytest.raises(FileNotFoundError):
         assets_manager.load_obj('house-1')
+
+
+def test_create_floor_map():
+    GibsonAssetsUtilities().create_floor_map(env_name='house1', floor=0, image_size=(500, 500), save_to_image=True)
+    GibsonAssetsUtilities().create_floor_map(env_name='space7', floor=0, save_to_image=True)
+
+
+def test_load_map_and_metadata():
+    GibsonAssetsUtilities().load_map_and_metadata(env_name='house1', floor=0)
