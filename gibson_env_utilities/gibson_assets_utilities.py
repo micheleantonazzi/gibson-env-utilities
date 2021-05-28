@@ -1,6 +1,6 @@
 import os
 from functools import reduce
-from typing import Tuple, Dict
+from typing import Tuple, Dict, Union
 
 import cv2
 import yaml
@@ -44,7 +44,7 @@ class GibsonAssetsUtilities:
     def _get_file_name(self, env_name: str, floor: int) -> str:
         return env_name + '_floor_' + str(floor)
 
-    def create_floor_map(self, env_name: str, floor: int, image_size: Tuple[int, int] = (1280, 1280), floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
+    def create_floor_map(self, env_name: str, floor: int, image_size: Union[Tuple[int, int], str] = 'auto', floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
         """
         Generates the map of the environment at the given floor and the relative metadata.
         The floor map is a png image, while metadata indicates:
@@ -56,8 +56,9 @@ class GibsonAssetsUtilities:
         :param floor:
         :param floor_offset: the offset to start cutting the mesh (the first cross section is performed at [floor_height + floor_offset]
         :type floor_offset: float
-        :param image_size: the size of the map image in pixel
-        :type image_size: Tuple[int, int]
+        :param image_size: the size of the map image in pixel. The default value is 'auto':
+                                it is a applied an easy algorithm that automatically set the image size based on environments' dimensions
+        :type image_size: Tuple[int, int] or str
         :param height: the maximum height to stop cutting the mesh. This means that the last mesh cut has is made at [floor_height + floor_offset + height]
         :type height: float
         :param step: the step used to cut the environment's mesh
@@ -79,7 +80,15 @@ class GibsonAssetsUtilities:
             slice.plot_entities(show=False, annotations=False, color='k')
 
         fig: Figure = plt.gcf()
-        fig.set_size_inches(image_size[0] / 100.0, image_size[1] / 100.0)
+        if image_size == 'auto':
+            ymin, ymax = plt.gca().get_ylim()
+            xmin, xmax = plt.gca().get_xlim()
+            longer = abs(ymin - ymax) if abs(ymin - ymax) > abs(xmin - xmax) else abs(xmin - xmax)
+            fig.set_size_inches(longer * 30 / 100.0, longer * 30 / 100.0)
+        else:
+            fig.set_size_inches(image_size[0] / 100.0, image_size[1] / 100.0)
+
+        fig.tight_layout()
         fig.canvas.draw()
 
         # Extract metadata
