@@ -113,7 +113,7 @@ class GibsonAssetsUtilities:
         :param floor: the environment floor
         :return: the map and the relative metadata
         """
-        map = cv2.imread(self._get_file_name(env_name, floor) + '.png')
+        map = cv2.imread(os.path.join(os.path.dirname(__file__), 'data', 'maps', self._get_file_name(env_name, floor) + '.png'))
         with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', self._get_file_name(env_name, floor)) + '.yaml', mode='r') as f:
             metadata: Dict = yaml.load(f, Loader=yaml.FullLoader)
 
