@@ -44,7 +44,7 @@ class GibsonAssetsUtilities:
     def _get_file_name(self, env_name: str, floor: int) -> str:
         return env_name + '_floor_' + str(floor)
 
-    def create_floor_map(self, env_name: str, floor: int, image_size: Union[Tuple[int, int], str] = 'auto', floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_image: bool = False):
+    def create_floor_map(self, env_name: str, floor: int, image_size: Union[Tuple[int, int], str] = 'auto', floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_file: bool = False):
         """
         Generates the map of the environment at the given floor and the relative metadata.
         The floor map is a png image, while metadata indicates:
@@ -63,8 +63,8 @@ class GibsonAssetsUtilities:
         :type height: float
         :param step: the step used to cut the environment's mesh
         :type step: float
-        :param save_to_image
-        :type save_to_image: bool
+        :param save_to_file
+        :type save_to_file: bool
         :return: None
         """
         mesh = self.load_obj(env_name=env_name)
@@ -100,7 +100,7 @@ class GibsonAssetsUtilities:
         scale = abs(inv_x_0 - inv_x_1)
         metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
 
-        if save_to_image:
+        if save_to_file:
             file_name = self._get_file_name(env_name, floor)
             fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', file_name + '.png'), dpi=fig.dpi)
             with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
