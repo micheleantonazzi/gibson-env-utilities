@@ -90,8 +90,8 @@ class VoronoiGraphGenerator:
         # Get first child of the external contour
         fist_child = hierarchy[0][l_contour_index][2]
         draw_internal_contours(enumerate_hierarchy[fist_child])
-        cv2.imshow('filled image', filled_image)
-        cv2.waitKey(0)
+        #cv2.imshow('filled image', filled_image)
+        #cv2.waitKey(0)
 
         # Find new contours in the filled image (in this way, t
         contours, hierarchy = cv2.findContours(filled_image, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE)

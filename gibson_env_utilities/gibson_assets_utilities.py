@@ -63,7 +63,7 @@ class GibsonAssetsUtilities:
         :type height: float
         :param step: the step used to cut the environment's mesh
         :type step: float
-        :param save_to_file
+        :param save_to_file: all generated maps and relatives metadata are saved in temporary map folder. To save them permanently, set this flag True
         :type save_to_file: bool
         :return: None
         """
@@ -99,6 +99,12 @@ class GibsonAssetsUtilities:
         inv_x_1, _ = inv.transform((1, 0))
         scale = abs(inv_x_0 - inv_x_1)
         metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
+
+        # Save files in temporary folder
+        file_name = self._get_file_name(env_name, floor)
+        fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'temporary_maps', 'maps', file_name + '.png'), dpi=fig.dpi)
+        with open(os.path.join(os.path.dirname(__file__), 'data', 'temporary_maps', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
+            yaml.dump(metadata, f, default_flow_style=False)
 
         if save_to_file:
             file_name = self._get_file_name(env_name, floor)
