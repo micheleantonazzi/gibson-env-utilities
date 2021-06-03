@@ -3,6 +3,8 @@ from typing import List, Tuple, Dict, Set
 
 import cv2
 import numpy as np
+import skimage
+from skimage.morphology import skeletonize
 from termcolor import colored
 
 from gibson_env_utilities.gibson_assets_utilities import GibsonAssetsUtilities
@@ -93,7 +95,7 @@ class VoronoiGraphGenerator:
             raise FileNotFoundError
 
         self._map: np.array = cv2.cvtColor(self._map, cv2.COLOR_RGB2GRAY)
-        self._voronoi_bitmap = np.array([], dtype=np.int)
+        self._voronoi_bitmap = np.array([], dtype=int)
 
         # Graph structure
         # Contains the black point of the voronoi bitmap (which are all graph nodes)
@@ -115,7 +117,7 @@ class VoronoiGraphGenerator:
             9) the segments of the voronoi facets perimeter are examined.
                They are drawn only if they are inside the building's outline and not overlap an obstacle
                (in other words, if the extreme points that define a segment are inside the image and the correspondent pixel is white)
-            10) The resulting image has white background and the resulting voronoi image is highlighted in black
+            10) At then end, to clean the voronoi bitmap, it is dilated and then its skeleton is found using scikit-image
         :return:
         """
         # 1) Threshold map
@@ -179,7 +181,7 @@ class VoronoiGraphGenerator:
 
         for contour, contour_hierarchy in zip(contours, hierarchy[0]):
             # Insert the all contours' points into subdiv
-            for point in [np.array(p[0], dtype=np.float) for p in contour]:
+            for point in [np.array(p[0], dtype=float) for p in contour]:
                 subdiv.insert(point)
 
         # 9) Draw voronoi facets contours and create the voronoi bitmap
@@ -187,7 +189,7 @@ class VoronoiGraphGenerator:
         (facets, centers) = subdiv.getVoronoiFacetList([])
 
         for facet in facets:
-            facet_points = np.array(facet, np.int)
+            facet_points = np.array(facet, int)
 
             # Draw voronoi facets contour lines only if they are inside image boundaries
             facet_lines = zip(np.roll(facet_points, 1, axis=0), facet_points)
@@ -198,14 +200,22 @@ class VoronoiGraphGenerator:
                         and filled_image[p1[1], p1[0]] > 0 and filled_image[p2[1], p2[0]] > 0:
                     cv2.line(voronoi_bitmap, p1, p2, color=0, thickness=1)
 
-
-
         #cv2.imshow('voronoi bitmap', voronoi_bitmap)
         #cv2.waitKey()
 
-        ''
+        # 10) The voronoi bitmap is dilated and then the its skeleton are found
+        dilated_voronoi_bitmap = cv2.bitwise_not(voronoi_bitmap)
+        dilated_voronoi_bitmap = cv2.dilate(dilated_voronoi_bitmap, kernel=np.ones((9, 9), dtype=np.uint8))
+        #cv2.imshow('dilated voronoi bitmap', dilated_voronoi_bitmap)
+        #cv2.waitKey()
 
-        self._voronoi_bitmap = voronoi_bitmap
+        dilated_voronoi_bitmap[dilated_voronoi_bitmap == 255] = 1
+        skeleton_voronoi_bitmap = (skeletonize(dilated_voronoi_bitmap) * 255).astype(np.uint8)
+        skeleton_voronoi_bitmap = cv2.bitwise_not(skeleton_voronoi_bitmap)
+        #cv2.imshow('dilated voronoi bitmap', skeleton_voronoi_bitmap)
+        #cv2.waitKey()
+
+        self._voronoi_bitmap = skeleton_voronoi_bitmap
 
         if save_to_file:
             # Save voronoi bitmap
@@ -220,7 +230,7 @@ class VoronoiGraphGenerator:
                 os.path.dirname(__file__), 'data', 'maps_with_voronoi_bitmaps', GibsonAssetsUtilities.GET_FILE_NAME(self._env_name, self._floor) + '.png'),
                 map_voronoi_bitmap)
 
-        return voronoi_bitmap
+        return self._voronoi_bitmap
 
     def generate_voronoi_graph(self):
         import sys
