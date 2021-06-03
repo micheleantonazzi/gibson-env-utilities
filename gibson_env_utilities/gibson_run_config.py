@@ -29,7 +29,7 @@ class GibsonConfigRun:
 
         self._gibson_environments_data = GibsonEnvironmentsData()
         with open(os.path.join(os.path.dirname(__file__), 'data', 'gibson_config_file.yaml'), mode='r') as config_file:
-            self._gibson_config_parameters = yaml.load(config_file)
+            self._gibson_config_parameters = yaml.load(config_file, Loader=yaml.FullLoader)
 
         # Set the simulation environment
         self._gibson_config_parameters['envname'] = simulation_env.__name__

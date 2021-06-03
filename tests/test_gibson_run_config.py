@@ -26,7 +26,7 @@ def test_get_parameters_and_write_to_file():
     config = GibsonConfigRun(simulation_env=TurtlebotNavigateEnv, world_name='Allensville', floor=0)
     config.write_to_file()
     with open(os.path.join(os.path.dirname(inspect.getfile(GibsonConfigRun)), 'data', 'gibson_config_file_temp.yaml'), mode='r') as config_file:
-        loaded_parameters = yaml.load(config_file)
+        loaded_parameters = yaml.load(config_file, Loader=yaml.FullLoader)
 
     assert loaded_parameters == config.get_parameters()
 
