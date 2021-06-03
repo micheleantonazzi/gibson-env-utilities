@@ -65,7 +65,8 @@ setup(
         'trimesh',
         'shapely',
         'numpy',
-        'opencv-python'
+        'opencv-python',
+        'scikit-image'
     ],
     entry_points={
         'console_scripts': [
