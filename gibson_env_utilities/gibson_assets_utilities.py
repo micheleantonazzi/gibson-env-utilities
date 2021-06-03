@@ -41,7 +41,8 @@ class GibsonAssetsUtilities:
 
         return mesh
 
-    def _get_file_name(self, env_name: str, floor: int) -> str:
+    @staticmethod
+    def GET_FILE_NAME(env_name: str, floor: int) -> str:
         return env_name + '_floor_' + str(floor)
 
     def create_floor_map(self, env_name: str, floor: int, image_size: Union[Tuple[int, int], str] = 'auto', floor_offset: float = 0.10, height: float = 1.0, step: float = 0.10, save_to_file: bool = False):
@@ -101,13 +102,13 @@ class GibsonAssetsUtilities:
         metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
 
         # Save files in temporary folder
-        file_name = self._get_file_name(env_name, floor)
+        file_name = GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor)
         fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'temporary_maps', 'maps', file_name + '.png'), dpi=fig.dpi)
         with open(os.path.join(os.path.dirname(__file__), 'data', 'temporary_maps', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
             yaml.dump(metadata, f, default_flow_style=False)
 
         if save_to_file:
-            file_name = self._get_file_name(env_name, floor)
+            file_name = GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor)
             fig.savefig(os.path.join(os.path.dirname(__file__), 'data', 'maps', file_name + '.png'), dpi=fig.dpi)
             with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', file_name + '.yaml'), mode='w') as f:
                 yaml.dump(metadata, f, default_flow_style=False)
@@ -119,8 +120,8 @@ class GibsonAssetsUtilities:
         :param floor: the environment floor
         :return: the map and the relative metadata
         """
-        map = cv2.imread(os.path.join(os.path.dirname(__file__), 'data', 'maps', self._get_file_name(env_name, floor) + '.png'))
-        with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', self._get_file_name(env_name, floor)) + '.yaml', mode='r') as f:
+        map = cv2.imread(os.path.join(os.path.dirname(__file__), 'data', 'maps', GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor) + '.png'))
+        with open(os.path.join(os.path.dirname(__file__), 'data', 'maps_metadata', GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor)) + '.yaml', mode='r') as f:
             metadata: Dict = yaml.load(f, Loader=yaml.FullLoader)
 
         return map, metadata
