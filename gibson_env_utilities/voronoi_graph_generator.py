@@ -101,7 +101,7 @@ class VoronoiGraphGenerator:
         # Contains the black point of the voronoi bitmap (which are all graph nodes)
         self._graph = Graph(self._map.shape[0], self._map.shape[1])
 
-    def generate_voronoi_bitmap(self, save_to_file: bool = False) -> np.array:
+    def generate_voronoi_bitmap(self, robot_radius: float = 0.05, save_to_file: bool = False) -> np.array:
         """
         This method generates a voronoi bitmap starting from a floor map.
         Steps:
@@ -117,7 +117,10 @@ class VoronoiGraphGenerator:
             9) the segments of the voronoi facets perimeter are examined.
                They are drawn only if they are inside the building's outline and not overlap an obstacle
                (in other words, if the extreme points that define a segment are inside the image and the correspondent pixel is white)
-            10) At then end, to clean the voronoi bitmap, it is dilated and then its skeleton is found using scikit-image
+            10) To clean the voronoi bitmap, it is dilated and then its skeleton is found using scikit-image
+            11) Finally, all pixels of the voronoi bitmap too close to an obstacle are discarded (this operation is performed using robot_radius parameter).
+
+        :param robot_radius: the robot radius in meter
         :return:
         """
         # 1) Threshold map
@@ -212,8 +215,30 @@ class VoronoiGraphGenerator:
         dilated_voronoi_bitmap[dilated_voronoi_bitmap == 255] = 1
         skeleton_voronoi_bitmap = (skeletonize(dilated_voronoi_bitmap) * 255).astype(np.uint8)
         skeleton_voronoi_bitmap = cv2.bitwise_not(skeleton_voronoi_bitmap)
+
+        # The dilation operation may ahve joined different voronoi line, so this operation discard all point in a wrong area (outside the building and over an obstacle)
+        skeleton_voronoi_bitmap[(skeleton_voronoi_bitmap == 0) & (filled_image == 0)] = 255
         #cv2.imshow('dilated voronoi bitmap', skeleton_voronoi_bitmap)
         #cv2.waitKey()
+
+        # 11) Discard the pixels too close to an obstacle
+        for (x, y) in np.ndindex(skeleton_voronoi_bitmap.shape[:2]):
+            if skeleton_voronoi_bitmap[x, y] == 0:
+                image_origin = self._map_metadata['origin']
+                scale = self._map_metadata['scale']
+
+                x_real = (x - image_origin[0]) * scale
+                y_real = (y - image_origin[1]) * scale
+
+                # Find the 8 points in the circumference centered in (x_real, y_real) with radius = robot_radius
+                angles = [(2 * k * np.pi) / 8 for k in range(8)]
+                real_coordinates = [(robot_radius * np.cos(a) + x_real, robot_radius * np.sin(a) + y_real) for a in angles]
+                pixel_coordinates = [(round(x_real_p / scale + image_origin[0]), round(y_real_p / scale + image_origin[1])) for x_real_p, y_real_p in real_coordinates]
+
+                for x1, y1 in pixel_coordinates + [(x, y)]:
+                    if filled_image[x1, y1] == 0:
+                        skeleton_voronoi_bitmap[x, y] = 255
+                        break
 
         self._voronoi_bitmap = skeleton_voronoi_bitmap
 
@@ -233,6 +258,12 @@ class VoronoiGraphGenerator:
         return self._voronoi_bitmap
 
     def generate_voronoi_graph(self):
+        """
+        Extracts the graph from voronoi bitmap.
+        The graph can be composed by multiple connected components, the graph entity stores all of them.
+        Typically the robot positions are chosen from the longest one.
+        :return: the graph
+        """
         import sys
         sys.setrecursionlimit(10000)
         #cv2.imshow('voronoi bitmap', self._voronoi_bitmap)
