@@ -13,17 +13,29 @@ def test_voronoi_bitmap():
     assert np.array_equal(voronoi_bitmap_loaded, voronoi_bitmap)
 
 
-def test_graph():
+def test_graph_nodes():
     voronoi_graph_generator = VoronoiGraphGenerator(env_name='house1', floor=0)
     voronoi_bitmap = voronoi_graph_generator.generate_voronoi_bitmap()
-    graph = voronoi_graph_generator.generate_voronoi_graph()
+    graph = voronoi_graph_generator.get_voronoi_graph()
 
     # Test nodes
     black_pixels = voronoi_bitmap[voronoi_bitmap == 0]
     assert len(graph.get_nodes().values()) == len(black_pixels)
 
-    # Test connected components
-    graph.find_connected_components()
+
+def test_graph_bitmap():
+    voronoi_graph_generator = VoronoiGraphGenerator(env_name='house1', floor=0)
+    voronoi_bitmap = voronoi_graph_generator.generate_voronoi_bitmap()
+    graph = voronoi_graph_generator.get_voronoi_graph()
+
+    assert np.array_equal(voronoi_bitmap, graph.get_graph_bitmap())
+
+
+def test_graph_connected_components():
+    voronoi_graph_generator = VoronoiGraphGenerator(env_name='house1', floor=0)
+    voronoi_bitmap = voronoi_graph_generator.generate_voronoi_bitmap()
+    graph = voronoi_graph_generator.get_voronoi_graph()
+
     components_image = np.array([[255 for _ in range(voronoi_bitmap.shape[0])] for _ in range(voronoi_bitmap.shape[1])], dtype=np.uint8)
     for component in graph.get_connected_components().values():
         for node in component:
