@@ -15,7 +15,7 @@ def test_load_obj():
 
 def test_create_floor_map():
     GibsonAssetsUtilities().create_floor_map(env_name='house1', floor=0, image_size=(500, 500), save_to_file=True)
-    GibsonAssetsUtilities().create_floor_map(env_name='house1', floor=0, save_to_file=True)
+    GibsonAssetsUtilities().create_floor_map(env_name='house1', floor=0, image_size='auto', save_to_file=True)
     GibsonAssetsUtilities().create_floor_map(env_name='space7', floor=0, save_to_file=False)
 
 
