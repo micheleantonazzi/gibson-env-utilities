@@ -2,12 +2,16 @@ import os
 
 import cv2
 import numpy as np
+import pytest
 
 from gibson_env_utilities.voronoi_graph_generator import VoronoiGraphGenerator
 
 
 def test_voronoi_bitmap():
-    voronoi_graph_generator = VoronoiGraphGenerator(env_name='house1', floor=0)
+    with pytest.raises(FileNotFoundError):
+        VoronoiGraphGerator(env_name='house14', floor=0)
+
+    voronoi_graph_generator = VoronoiGraphGerator(env_name='house1', floor=0)
     voronoi_bitmap = voronoi_graph_generator.generate_voronoi_bitmap()
     graph = voronoi_graph_generator.get_voronoi_graph()
 
