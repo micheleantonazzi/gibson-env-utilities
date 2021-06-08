@@ -1,4 +1,4 @@
-origin: !!python/tuple
-- 366
-- 232
-scale: 0.0351
+origin:
+  x: 366
+  y: 302
+scale: 0.035084

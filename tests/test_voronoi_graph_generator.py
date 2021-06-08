@@ -1,6 +1,3 @@
-import os
-
-import cv2
 import numpy as np
 import pytest
 
@@ -36,6 +33,6 @@ def test_graph_connected_components():
     components_image = np.array([[255 for _ in range(voronoi_bitmap.shape[0])] for _ in range(voronoi_bitmap.shape[1])], dtype=np.uint8)
     for component in graph.get_connected_components().values():
         for node in component:
-            components_image[node.get_image_coordinates()[0], node.get_image_coordinates()[1]] = 0
+            components_image[node.get_coordinate().to_img_index()] = 0
 
     assert np.array_equal(components_image, voronoi_bitmap)

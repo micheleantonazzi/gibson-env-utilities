@@ -94,12 +94,13 @@ class GibsonAssetsUtilities:
 
         # Extract metadata
         ax = fig.gca()
+        _, height = fig.canvas.get_width_height()
         x_0, y_0 = ax.transData.transform((0.0, 0.0))
-        inv = ax.transData.inverted()
-        inv_x_0, _ = inv.transform((0, 0))
-        inv_x_1, _ = inv.transform((1, 0))
-        scale = abs(inv_x_0 - inv_x_1)
-        metadata = {'origin': (int(x_0), int(y_0)), 'scale': float(round(scale, 4))}
+
+        inv_x_0, _ = ax.transData.transform((0, 0))
+        inv_x_1, _ = ax.transData.transform((1, 0))
+        scale = 1 / abs(inv_x_0 - inv_x_1)
+        metadata = {'origin': {'x': int(x_0), 'y': int(height - y_0)}, 'scale': float(round(scale, 6))}
 
         # Save files in temporary folder
         file_name = GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor)

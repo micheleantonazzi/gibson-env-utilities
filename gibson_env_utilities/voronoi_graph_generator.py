@@ -1,126 +1,14 @@
 import os
-from typing import List, Tuple, Dict, Set
+from typing import List, Tuple, Dict, Set, Union
 
 import cv2
 import numpy as np
-import skimage
+import sys
 from skimage.morphology import skeletonize
 from termcolor import colored
 
 from gibson_env_utilities.gibson_assets_utilities import GibsonAssetsUtilities
-
-
-class Node:
-    def __init__(self, x_image: int, y_image: int, map_origin: (int, int), scale: float):
-        self._x_image = x_image
-        self._y_image = y_image
-        self._x_real = (x_image - map_origin[0]) * scale
-        self._y_real = (y_image - map_origin[1]) * scale
-        self._connected_nodes: List[Node] = []
-
-    def connect_with(self, node: 'Node'):
-        self._connected_nodes.append(node)
-
-    def get_image_coordinates(self):
-        return self._x_image, self._y_image
-
-    def get_connected_nodes(self) -> List['Node']:
-        return self._connected_nodes
-
-    def remove_connected_node(self, node: 'Node'):
-        self._connected_nodes.remove(node)
-
-    def __eq__(self, other):
-        return isinstance(other, Node) and self._x_image == other._x_image and self._y_image == other._y_image
-
-    def __hash__(self):
-        return hash((self._x_image, self._y_image))
-
-
-class Graph:
-    def __init__(self, image_width, image_height):
-        self._image_width = image_width
-        self._image_height = image_height
-        self._nodes: Dict[Tuple[int, int], Node] = {}
-        self._arcs = set()
-        self._connected_components: Dict[int, Set[Node]] = {}
-
-    def add_node(self, node: Node):
-        if node.get_image_coordinates() not in self._nodes:
-            self._nodes[node.get_image_coordinates()] = node
-
-    def get_nodes(self) -> Dict[Tuple[int, int], Node]:
-        return self._nodes
-
-    def add_connection(self, node1_coordinates: Tuple[int, int], node2_coordinates: Tuple[int, int]):
-        self._nodes[node1_coordinates].connect_with(self._nodes[node2_coordinates])
-
-    def get_connected_components(self):
-        return self._connected_components
-
-    def get_graph_bitmap(self):
-        graph_bitmap = np.array(
-            [255 for _ in range(self._image_width * self._image_height)], dtype=np.uint8
-        ).reshape((self._image_width, self._image_height))
-
-        for x, y in self._nodes.keys():
-            graph_bitmap[x, y] = 0
-
-        return graph_bitmap
-
-    def prune_side_lines(self):
-        visited_nodes = set()
-
-        def iterate(node: Node, component: int):
-            if node in visited_nodes:
-                return
-
-            visited_nodes.add(node)
-
-            for connected_node in node.get_connected_nodes():
-                iterate(connected_node, component)
-
-            remove_nodes = set()
-            for connected_node in node.get_connected_nodes():
-                if len(connected_node.get_connected_nodes()) == 1:
-                    remove_nodes.add(connected_node)
-
-            for remove_node in remove_nodes:
-                node.get_connected_nodes().remove(remove_node)
-                self._nodes.pop(remove_node.get_image_coordinates())
-                self._connected_components[component].remove(remove_node)
-
-        for component in self._connected_components.keys():
-            visited_nodes = set()
-            node = list(self._connected_components[component])[0]
-            iterate(node, component)
-
-    def find_connected_components(self):
-        component_id = 0
-
-        visited_nodes = set()
-
-        nodes_in_components: Dict[Node, int] = {}
-
-        def find_connected_component(node: Node):
-            if node in visited_nodes:
-                return
-
-            visited_nodes.add(node)
-            self._connected_components[component_id].add(node)
-            nodes_in_components[node] = component_id
-
-            for connected_node in node.get_connected_nodes():
-                find_connected_component(connected_node)
-
-        for node in self._nodes.values():
-
-            # Verify that the node does not already belong to a connected component
-            if node not in nodes_in_components:
-                visited_nodes = set()
-                self._connected_components[component_id] = set()
-                find_connected_component(node)
-                component_id += 1
+from gibson_env_utilities.utilities.graph import Coordinate, Graph, Node
 
 
 class VoronoiGraphGenerator:
@@ -129,9 +17,14 @@ class VoronoiGraphGenerator:
         self._floor = floor
         self._assets_manager = GibsonAssetsUtilities()
         try:
-            self._map, self._map_metadata = self._assets_manager.load_map_and_metadata(env_name=env_name, floor=floor)
+            self._map, map_metadata = self._assets_manager.load_map_and_metadata(env_name=env_name, floor=floor)
+            self._scale = map_metadata['scale']
+            self._map_origin = Coordinate(x=map_metadata['origin']['x'], y=map_metadata['origin']['y'],
+                                          map_origin=(map_metadata['origin']['x'], map_metadata['origin']['y']), scale=self._scale)
         except FileNotFoundError:
-            print(colored('The map or its metadata of the {0} world do not exist! Create them before using this VoronoiGraphGenerator'.format(env_name), 'red'))
+            print(colored(
+                'The map or its metadata of the {0} world do not exist! Create them before using this VoronoiGraphGenerator'.format(
+                    env_name), 'red'))
             raise FileNotFoundError
 
         self._map: np.array = cv2.cvtColor(self._map, cv2.COLOR_RGB2GRAY)
@@ -139,7 +32,7 @@ class VoronoiGraphGenerator:
 
         # Graph structure
         # Contains the black point of the voronoi bitmap (which are all graph nodes)
-        self._graph = Graph(self._map.shape[0], self._map.shape[1])
+        self._graph = Graph(self._map.shape[0], self._map.shape[1], self._map_origin, self._scale)
 
     def _generate_voronoi_graph(self, voronoi_bitmap) -> Graph:
         """
@@ -149,15 +42,13 @@ class VoronoiGraphGenerator:
         The side lines are pruned directly by the graph.
         :return: the graph
         """
-        import sys
-        sys.setrecursionlimit(10000)
 
-        graph = Graph(self._map.shape[0], self._map.shape[1])
+        graph = Graph(self._map.shape[0], self._map.shape[1], self._map_origin, self._scale)
         # Creates graph nodes converting black pixels
-        for x, y in np.ndindex(voronoi_bitmap.shape[:2]):
+        for y, x in np.ndindex(voronoi_bitmap.shape[:2]):
             # If the pixel is black, it represents a graph node
-            if voronoi_bitmap[x, y] == 0:
-                node = Node(x_image=x, y_image=y, map_origin=self._map_metadata['origin'], scale=self._map_metadata['scale'])
+            if voronoi_bitmap[y, x] == 0:
+                node = Node(Coordinate(x=x, y=y, map_origin=(self._map_origin.x, self._map_origin.y), scale=self._scale))
                 graph.add_node(node)
 
         # Search connection between nodes
@@ -165,14 +56,16 @@ class VoronoiGraphGenerator:
         # For each node, its surroundings is checked to find other black pixels (that are connected nodes).
         nodes = graph.get_nodes()
         for node in nodes.values():
-            x, y = node.get_image_coordinates()
-            mask_indexes = [(x1, y1)
-                            for x1 in range(max(0, x - 1), min(x + 2, voronoi_bitmap.shape[0]))
-                            for y1 in range(max(0, y - 1), min(y + 2, voronoi_bitmap.shape[1]))
+            y, x = node.get_coordinate().to_img_index()
+            mask_indexes = [(y1, x1)
+                            for y1 in range(max(0, y - 1), min(y + 2, voronoi_bitmap.shape[0]))
+                            for x1 in range(max(0, x - 1), min(x + 2, voronoi_bitmap.shape[1]))
                             if x1 != x or y1 != y]
-            for x1, y1 in mask_indexes:
-                if voronoi_bitmap[x1, y1] == 0:
-                    graph.add_connection(node1_coordinates=(x, y), node2_coordinates=(x1, y1))
+
+            for y1, x1 in mask_indexes:
+                if voronoi_bitmap[y1, x1] == 0:
+                    graph.add_connection(node1_coordinates=Coordinate(x=x, y=y, map_origin=self._map_origin.get_x_y_tuple(), scale=self._scale),
+                                         node2_coordinates=Coordinate(x=x1, y=y1, map_origin=self._map_origin.get_x_y_tuple(), scale=self._scale))
 
         graph.find_connected_components()
         return graph
@@ -203,21 +96,22 @@ class VoronoiGraphGenerator:
         """
         # 1) Threshold map
         ret, threshed_image = cv2.threshold(self._map, 250, 255, cv2.THRESH_BINARY)
-        #cv2.imshow('thresh image', threshed_image)
-        #cv2.waitKey(0)
+        # cv2.imshow('thresh image', threshed_image)
+        # cv2.waitKey(0)
 
         # 2) Map erosion and dilation
         eroded_image = cv2.erode(threshed_image, np.ones((3, 3), np.uint8), borderType=cv2.BORDER_REFLECT)
-        #cv2.imshow('eroded image', threshed_image)
-        #cv2.waitKey(0)
+        # cv2.imshow('eroded image', threshed_image)
+        # cv2.waitKey(0)
 
         dilated_image = cv2.dilate(eroded_image, np.ones((3, 3), np.uint8))
-        #cv2.imshow('dilate image', threshed_image)
-        #cv2.waitKey(0)
+        # cv2.imshow('dilate image', threshed_image)
+        # cv2.waitKey(0)
 
         # 3) Find contours
         (image_width, image_height) = dilated_image.shape
-        contour_image = np.array([0 for _ in range(image_width * image_height)], dtype='uint8').reshape((image_width, image_height))
+        contour_image = np.array([0 for _ in range(image_width * image_height)], dtype='uint8').reshape(
+            (image_width, image_height))
         contours, hierarchy = cv2.findContours(dilated_image, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE)
 
         # 4) Find the building contour (it is assumed to be the longest one)
@@ -226,8 +120,8 @@ class VoronoiGraphGenerator:
 
         #  5) Fill the area outside the building's contour
         cv2.drawContours(contour_image, contours, contourIdx=l_contour_index, color=255, thickness=cv2.FILLED)
-        #cv2.imshow('external contour image', contour_image)
-        #cv2.waitKey(0)
+        # cv2.imshow('external contour image', contour_image)
+        # cv2.waitKey(0)
 
         # 6) Draw only contours inside the longest one and fill them (hierarchy = [Next, Previous, First_Child, Parent])
         filled_image = contour_image.copy()
@@ -252,9 +146,8 @@ class VoronoiGraphGenerator:
         first_child = hierarchy[0][l_contour_index][2]
         if first_child != -1:
             draw_internal_contours(enumerate_hierarchy[first_child])
-        #cv2.imshow('filled image', filled_image)
-        #cv2.waitKey(0)
-
+        # cv2.imshow('filled image', filled_image)
+        # cv2.waitKey(0)
 
         # 8) The voronoi diagram is calculated using Delaunay triangulation
         rect = (0, 0, self._map.shape[1], self._map.shape[0])
@@ -267,9 +160,10 @@ class VoronoiGraphGenerator:
 
         # 9) Draw voronoi facets contours and create the voronoi bitmap
         eroded_filled_map = cv2.erode(filled_image, kernel=np.ones((3, 3), dtype=int), iterations=1)
-        #cv2.imshow('eroded filled', eroded_filled_map)
-        #cv2.waitKey()
-        voronoi_bitmap = np.array([255 for _ in range(image_width * image_height)], dtype=np.uint8).reshape((image_width, image_height))
+        # cv2.imshow('eroded filled', eroded_filled_map)
+        # cv2.waitKey()
+        voronoi_bitmap = np.array([255 for _ in range(image_width * image_height)], dtype=np.uint8).reshape(
+            (image_width, image_height))
         (facets, centers) = subdiv.getVoronoiFacetList([])
 
         for facet in facets:
@@ -284,8 +178,8 @@ class VoronoiGraphGenerator:
                         and eroded_filled_map[p1[1], p1[0]] > 0 and eroded_filled_map[p2[1], p2[0]] > 0:
                     cv2.line(voronoi_bitmap, p1, p2, color=0, thickness=1)
 
-        #cv2.imshow('voronoi bitmap', voronoi_bitmap)
-        #cv2.waitKey()
+        # cv2.imshow('voronoi bitmap', voronoi_bitmap)
+        # cv2.waitKey()
 
         # 10) Create the voronoi graph
         graph = self._generate_voronoi_graph(voronoi_bitmap)
@@ -294,42 +188,34 @@ class VoronoiGraphGenerator:
 
         # 11) Generate the skeletonized voronoi bitmap and replace graph
         dilated_voronoi_bitmap = cv2.bitwise_not(voronoi_bitmap)
-        dilated_voronoi_bitmap = cv2.dilate(dilated_voronoi_bitmap, kernel=np.ones((3, 3), dtype=int), borderType=cv2.BORDER_CONSTANT)
-        #cv2.imshow('dilated voronoi bitmap', dilated_voronoi_bitmap)
-        #cv2.waitKey()
+        dilated_voronoi_bitmap = cv2.dilate(dilated_voronoi_bitmap, kernel=np.ones((3, 3), dtype=int),
+                                            borderType=cv2.BORDER_CONSTANT)
+        # cv2.imshow('dilated voronoi bitmap', dilated_voronoi_bitmap)
+        # cv2.waitKey()
 
         dilated_voronoi_bitmap[dilated_voronoi_bitmap == 255] = 1
         skeletonized_voronoi_bitmap = cv2.bitwise_not((skeletonize(dilated_voronoi_bitmap) * 255).astype(np.uint8))
-        #cv2.imshow('skeletonized voronoi bitmap', skeletonized_voronoi_bitmap)
-        #cv2.waitKey()
+        # cv2.imshow('skeletonized voronoi bitmap', skeletonized_voronoi_bitmap)
+        # cv2.waitKey()
         self._graph = self._generate_voronoi_graph(skeletonized_voronoi_bitmap)
         self._voronoi_bitmap = self._graph.get_graph_bitmap()
 
         if save_to_file:
             # Save voronoi bitmap
             cv2.imwrite(os.path.join(
-                os.path.dirname(__file__), 'data', 'voronoi_bitmaps', GibsonAssetsUtilities.GET_FILE_NAME(self._env_name, self._floor) + '.png'),
+                os.path.dirname(__file__), 'data', 'voronoi_bitmaps',
+                GibsonAssetsUtilities.GET_FILE_NAME(self._env_name, self._floor) + '.png'),
                 self._voronoi_bitmap)
 
             # Save map + voronoi bitmap
             map_voronoi_bitmap = self._map.copy()
             map_voronoi_bitmap[self._voronoi_bitmap == 0] = 0
             cv2.imwrite(os.path.join(
-                os.path.dirname(__file__), 'data', 'maps_with_voronoi_bitmaps', GibsonAssetsUtilities.GET_FILE_NAME(self._env_name, self._floor) + '.png'),
+                os.path.dirname(__file__), 'data', 'maps_with_voronoi_bitmaps',
+                GibsonAssetsUtilities.GET_FILE_NAME(self._env_name, self._floor) + '.png'),
                 map_voronoi_bitmap)
 
         return self._voronoi_bitmap
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def get_map(self) -> np.array:
+        return self._map
