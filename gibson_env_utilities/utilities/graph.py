@@ -42,14 +42,18 @@ class Coordinate:
     def is_image_coordinate(self):
         return isinstance(self._x, int) and isinstance(self._y, int)
 
-    def _convert_to_image_coordinate(self):
-        if not self.is_image_coordinate() and self.is_real_coordinate():
-            x_img = int(self._x / self._scale) + self._map_origin[0]
-            y_img = self._map_origin[1] - int(self._y / self._scale)
-            return x_img, y_img
+    def _convert_to_image_coordinate_tuple(self):
+        if self.is_image_coordinate():
+            return self._y, self._x
+        elif self.is_real_coordinate():
+            x_img = int(round(self._x / self._scale)) + self._map_origin[0]
+            y_img = self._map_origin[1] - int(round(self._y / self._scale))
+            return y_img, x_img
 
-    def _convert_to_real_coordinate(self):
-        if self.is_image_coordinate() and not self.is_real_coordinate():
+    def _convert_to_real_coordinate_tuple(self):
+        if self.is_real_coordinate():
+            return self._x, self._y
+        elif self.is_image_coordinate():
             x_real = (self._x - self._map_origin[0]) * self._scale
             y_real = (self._map_origin[1] - self._y) * self._scale
             return x_real, y_real
@@ -59,21 +63,14 @@ class Coordinate:
         Returns a tuple which can be used to index a pixel (y, x).
         :return: the image coordinate (pixel[y, x])
         """
-        if self.is_image_coordinate():
-            return self._y, self._x
-        elif self.is_real_coordinate():
-            x_img, y_img = self._convert_to_image_coordinate()
-            return y_img, x_img
+        return self._convert_to_image_coordinate_tuple()
 
     def to_real_point(self) -> Tuple[float, float]:
         """
         Returns a tuple of float which can be used as coordinate in real world (x, y).
         :return:
         """
-        if self.is_real_coordinate():
-            return self._x, self._y
-        elif self.is_image_coordinate():
-            return self._convert_to_real_coordinate()
+        return self._convert_to_real_coordinate_tuple()
 
     def get_x_y_tuple(self):
         """
@@ -96,6 +93,14 @@ class Coordinate:
 
     def __hash__(self):
         return hash((self._x, self._y))
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
+        y_img, x_img = self._convert_to_image_coordinate_tuple()
+        x_real, y_real = self._convert_to_real_coordinate_tuple()
+        return 'Coordinate: img[{0}, {1}] -> real[{2}, {3}]'.format(x_img, y_img, x_real, y_real)
 
 
 class Node:
@@ -127,6 +132,14 @@ class Node:
 
     def __hash__(self):
         return self._coordinate.__hash__()
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
+        y_img, x_img = self._coordinate.to_img_index()
+        x_real, y_real = self._coordinate.to_real_point()
+        return 'Node: img[{0}, {1}] -> real[{2}, {3}]'.format(x_img, y_img, x_real, y_real)
 
 
 class Graph:
@@ -221,7 +234,7 @@ class Graph:
     def get_map_origin(self) -> Coordinate:
         return self._map_origin
 
-    def get_real_position(self, interval: float) -> List[Node]:
+    def get_real_position(self, interval: float) -> List[Coordinate]:
         """
         Returns a list of real positions through the graph, considering each connected component.
         The positions are sampled with a distance specified by interval parameter.
@@ -229,25 +242,46 @@ class Graph:
         :return: a list containing the real positions
         """
         visited_nodes: Set[Node] = set()
-        positions: List[Node] = []
+        positions: List[Coordinate] = []
 
-        def find_positions(node: Node, distance: float):
+        def find_positions(node: Node, max_distance: float, distance: float):
             if node in visited_nodes:
                 return
 
             visited_nodes.add(node)
-
-            # If the node is a graph's extreme, it is included as node without considering the distance from the previous one
-            if node.get_connected_nodes_count() == 1:
-                positions.append(node)
-
             for connected_node in node.get_connected_nodes():
-                find_positions(connected_node, 0)
+                # Discard a previously visited node
+                if connected_node in visited_nodes:
+                    continue
+
+                # Create the points that define the segment, create the vector and find its length
+                current_distance = distance
+                point_a = node.get_coordinate().to_real_point()
+                point_b = connected_node.get_coordinate().to_real_point()
+                vector = (point_b[0] - point_a[0], point_b[1] - point_a[1])
+                vector_len = np.sqrt(np.power(vector[0], 2) + np.power(vector[1], 2))
+
+                while current_distance <= vector_len:
+                    ratio = current_distance / vector_len
+
+                    # Move point_a inside the segment
+                    point_a = (point_a[0] + (vector[0] * ratio), point_a[1] + (vector[1] * ratio))
+
+                    # Insert point_a in positions
+                    coordinate = Coordinate(x=point_a[0], y=point_a[1], map_origin=self._map_origin.get_x_y_tuple(), scale=self._scale)
+                    positions.append(coordinate)
+
+                    # Recalculate vector and its length and reset current distance
+                    vector = (point_b[0] - point_a[0], point_b[1] - point_a[1])
+                    vector_len = np.sqrt(np.power(vector[0], 2) + np.power(vector[1], 2))
+                    current_distance = max_distance
+
+                find_positions(connected_node, max_distance, current_distance - vector_len)
 
         for component in self._connected_components.values():
             starting_node = list(component)[0]
             visited_nodes = set()
 
-            find_positions(starting_node, 0)
+            find_positions(starting_node, interval, interval)
 
         return positions
