@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 from gibson.envs.no_physiscs_env import TurtlebotNavigateNoPhysicsEnv
 import argparse
 
@@ -30,6 +29,7 @@ if __name__ == '__main__':
     env.robot.set_position([0, 0, 0])
 
     for position in positions:
+
         # Remember to call env.step before every robot position change
         env.step([0.0, 0.0])
         x, y = position.to_real_point()
