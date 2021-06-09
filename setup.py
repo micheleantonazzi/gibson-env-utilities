@@ -66,7 +66,9 @@ setup(
         'shapely',
         'numpy',
         'opencv-python',
-        'scikit-image'
+        'scikit-image',
+        'generic-dataset',
+        'stub-generator'
     ],
     entry_points={
         'console_scripts': [
