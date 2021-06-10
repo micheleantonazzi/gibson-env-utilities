@@ -68,7 +68,8 @@ setup(
         'opencv-python',
         'scikit-image',
         'generic-dataset',
-        'stub-generator'
+        'stub-generator',
+        'pandas'
     ],
     entry_points={
         'console_scripts': [
