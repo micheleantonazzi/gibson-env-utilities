@@ -1,9 +1,7 @@
 import cupy
 import cv2
 import numpy as np
-from generic_dataset.data_pipeline import DataPipeline
 from generic_dataset.dataset_disk_manager import DatasetDiskManager
-from generic_dataset.utilities.color import Color
 from gibson.envs.no_physiscs_env import TurtlebotNavigateNoPhysicsEnv
 import argparse
 
@@ -16,6 +14,10 @@ config_file = GibsonConfigRun(simulation_env=TurtlebotNavigateNoPhysicsEnv, worl
     .is_discrete(False).write_to_file()
 
 if __name__ == '__main__':
+
+    # Disable the cuda memory pool (otherwise the gpu memory will be saturated)
+    cupy.cuda.set_allocator(None)
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default=config_file)
     args = parser.parse_args()
