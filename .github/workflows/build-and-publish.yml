@@ -38,6 +38,7 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Install dependencies
         run: |
+          sudo apt update
           sudo apt install -y libopenmpi-dev
           python -m pip install --upgrade pip
           pip install .[test]
