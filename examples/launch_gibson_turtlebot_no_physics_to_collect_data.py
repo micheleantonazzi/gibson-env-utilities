@@ -10,7 +10,9 @@ from gibson_env_utilities.gibson_environments_data import GibsonEnvironmentsData
 from gibson_env_utilities.gibson_run_config import GibsonConfigRun
 from gibson_env_utilities.voronoi_graph_generator import VoronoiGraphGenerator
 
-config_file = GibsonConfigRun(simulation_env=TurtlebotNavigateNoPhysicsEnv, world_name='house1', floor=0) \
+env_name, floor = 'house1', 0
+
+config_file = GibsonConfigRun(simulation_env=TurtlebotNavigateNoPhysicsEnv, world_name=env_name, floor=floor) \
     .is_discrete(False).write_to_file()
 
 if __name__ == '__main__':
@@ -21,8 +23,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default=config_file)
     args = parser.parse_args()
-
-    env_name, floor = 'house1', 0
 
     # Create the dataset
     dataset_path = '/home/michele/myfiles/doors_dataset'
@@ -38,8 +38,10 @@ if __name__ == '__main__':
     graph = voronoi_graph_generator.get_voronoi_graph()
     positions = graph.get_real_position(0.10)
     house1_map = voronoi_graph_generator.get_map()
+
     for position in positions:
         house1_map[position.to_img_index()] = 127
+
     cv2.imshow('map with selected positions', house1_map)
     cv2.waitKey()
 
