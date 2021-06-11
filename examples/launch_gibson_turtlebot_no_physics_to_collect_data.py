@@ -36,7 +36,7 @@ if __name__ == '__main__':
     voronoi_graph_generator = VoronoiGraphGenerator(env_name=env_name, floor=floor)
     voronoi_graph_generator.generate_voronoi_bitmap(save_to_file=False)
     graph = voronoi_graph_generator.get_voronoi_graph()
-    positions = graph.get_real_position(0.10)
+    positions = graph.get_real_position(0.20)
     house1_map = voronoi_graph_generator.get_map()
 
     for position in positions:
