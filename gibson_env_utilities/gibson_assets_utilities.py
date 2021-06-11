@@ -81,6 +81,8 @@ class GibsonAssetsUtilities:
             slice.plot_entities(show=False, annotations=False, color='k')
 
         fig: Figure = plt.gcf()
+        fig.tight_layout()
+
         if image_size == 'auto':
             ymin, ymax = plt.gca().get_ylim()
             xmin, xmax = plt.gca().get_xlim()
@@ -89,7 +91,6 @@ class GibsonAssetsUtilities:
         else:
             fig.set_size_inches(image_size[0] / 100.0, image_size[1] / 100.0)
 
-        fig.tight_layout()
         fig.canvas.draw()
 
         # Extract metadata
