@@ -59,7 +59,7 @@ setup(
     tests_require=test_deps,
     # Add here the package dependencies
     install_requires=[
-        'gibson>=0.7',
+        'gibson>=0.7.5',
         'PyYaml',
         'termcolor',
         'trimesh',
