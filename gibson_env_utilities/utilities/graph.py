@@ -234,6 +234,9 @@ class Graph:
     def get_map_origin(self) -> Coordinate:
         return self._map_origin
 
+    def get_scale(self) -> float:
+        return self._scale
+
     def get_real_position(self, interval: float) -> List[Coordinate]:
         """
         Returns a list of real positions through the graph, considering each connected component.
