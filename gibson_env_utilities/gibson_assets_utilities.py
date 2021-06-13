@@ -70,9 +70,9 @@ class GibsonAssetsUtilities:
         """
         mesh = self.load_obj(env_name=env_name)
 
-        origin = self._environments_data.get_environment_data(env_name)[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_POSITION]
-        origin[2] += floor_offset
-        slices_2D = mesh.section_multiplane(plane_origin=origin, plane_normal=[0, 0, 1], heights=np.arange(0.0, height, step).tolist())
+        floor_height = self._environments_data.get_environment_data(env_name)[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_FLOOR_HEIGHT]
+        floor_height += floor_offset
+        slices_2D = mesh.section_multiplane(plane_origin=[0, 0, floor_height + floor_offset], plane_normal=[0, 0, 1], heights=np.arange(0.0, height, step).tolist())
 
         plt.close()
         plt.axis('off')
@@ -101,7 +101,7 @@ class GibsonAssetsUtilities:
         inv_x_0, _ = ax.transData.transform((0, 0))
         inv_x_1, _ = ax.transData.transform((1, 0))
         scale = 1 / abs(inv_x_0 - inv_x_1)
-        metadata = {'origin': {'x': int(x_0), 'y': int(height - y_0)}, 'scale': float(round(scale, 6))}
+        metadata = {'origin': {'x': int(round(x_0)), 'y': int(round(height - y_0))}, 'scale': float(round(scale, 6))}
 
         # Save files in temporary folder
         file_name = GibsonAssetsUtilities.GET_FILE_NAME(env_name, floor)
