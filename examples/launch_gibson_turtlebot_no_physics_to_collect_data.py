@@ -30,7 +30,7 @@ if __name__ == '__main__':
     dataset = DatasetDiskManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
 
     house1_data = GibsonEnvironmentsData().get_environment_data(env_name=env_name)
-    floor_height = house1_data[GibsonEnvironmentsData.KEY_FLOORS][0][GibsonEnvironmentsData.KEY_FLOOR_HEIGHT]
+    floor_height = house1_data[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_FLOOR_HEIGHT]
 
     # Get positions using voronoi graph
     voronoi_graph_generator = VoronoiGraphGenerator(env_name=env_name, floor=floor)
