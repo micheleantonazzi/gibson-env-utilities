@@ -9044,6 +9044,16 @@ house7:
         - 0.0
         - 0.0
         - 0.0
+    3:
+      floor_height: 6.67
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house70:
   dataset: matterport
   has_semantics: true
