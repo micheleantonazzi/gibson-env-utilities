@@ -8186,6 +8186,36 @@ house13:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: 0.04
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    2:
+      floor_height: 2.84
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    3:
+      floor_height: 5.6
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house14:
   dataset: matterport
   has_semantics: true
