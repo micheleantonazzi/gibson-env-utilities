@@ -8221,7 +8221,7 @@ house14:
   has_semantics: true
   floors:
     0:
-      floor_height: 0.0
+      floor_height: 0.01
       orientation:
       - 0.0
       - 0.0
