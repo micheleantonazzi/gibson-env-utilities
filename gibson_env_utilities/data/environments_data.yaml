@@ -8389,6 +8389,16 @@ house20:
   has_semantics: true
   floors:
     0:
+      floor_height: -3.35
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    1:
       floor_height: 0.0
       orientation:
       - 0.0
