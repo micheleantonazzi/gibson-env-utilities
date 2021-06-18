@@ -8705,7 +8705,7 @@ house33:
   has_semantics: true
   floors:
     0:
-      floor_height: 0.0
+      floor_height: -6.5
       orientation:
       - 0.0
       - 0.0
@@ -8714,6 +8714,56 @@ house33:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: -2.05
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    2:
+      floor_height: 0.02
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    3:
+      floor_height: 2.25
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    4:
+      floor_height: 3.31
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    5:
+      floor_height: 7.4
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house34:
   dataset: matterport
   has_semantics: true
