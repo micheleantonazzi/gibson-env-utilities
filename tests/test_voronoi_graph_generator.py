@@ -6,7 +6,7 @@ from gibson_env_utilities.voronoi_graph_generator import VoronoiGraphGenerator
 
 def test_voronoi_bitmap():
     with pytest.raises(FileNotFoundError):
-        VoronoiGraphGenerator(env_name='house14', floor=0)
+        VoronoiGraphGenerator(env_name='house-1', floor=0)
 
     voronoi_graph_generator = VoronoiGraphGenerator(env_name='house1', floor=0)
     voronoi_bitmap = voronoi_graph_generator.generate_voronoi_bitmap()
