@@ -9201,7 +9201,7 @@ house50:
   has_semantics: true
   floors:
     0:
-      floor_height: 0.0
+      floor_height: -3.98
       orientation:
       - 0.0
       - 0.0
@@ -9210,6 +9210,56 @@ house50:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: -3.08
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    2:
+      floor_height: -0.82
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    3:
+      floor_height: 0.0
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    4:
+      floor_height: 2.49
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    5:
+      floor_height: 3.03
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house51:
   dataset: matterport
   has_semantics: true
