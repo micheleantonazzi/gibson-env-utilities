@@ -11,7 +11,7 @@ sample: DoorSample = doors_dataset.load_sample_using_relative_count(label=1, rel
 print(sample.get_bgr_image())
 sample.set_pretty_semantic_image(sample.get_semantic_image().copy())
 sample.pipeline_depth_data_to_image().run(use_gpu=False).get_data()
-sample.create_pretty_semantic_image(color=Color(red=0, green=256, blue=0))
+sample.create_pretty_semantic_image(color=Color(red=0, green=255, blue=0))
 
 display_image_0 = np.concatenate((sample.get_bgr_image(), cv2.cvtColor(sample.get_depth_image(), cv2.COLOR_GRAY2BGR)), axis=1)
 display_image_1 = np.concatenate((sample.get_semantic_image(), sample.get_pretty_semantic_image()), axis=1)
