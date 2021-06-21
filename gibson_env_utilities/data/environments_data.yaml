@@ -9091,7 +9091,7 @@ house46:
   has_semantics: true
   floors:
     0:
-      floor_height: 0.0
+      floor_height: -6.0
       orientation:
       - 0.0
       - 0.0
@@ -9100,6 +9100,16 @@ house46:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: 0.05
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house47:
   dataset: matterport
   has_semantics: true
