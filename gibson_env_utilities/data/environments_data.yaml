@@ -9616,6 +9616,26 @@ house63:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: 4.11
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
+    2:
+      floor_height: 7.62
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house64:
   dataset: matterport
   has_semantics: true
