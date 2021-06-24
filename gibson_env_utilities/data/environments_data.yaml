@@ -10156,6 +10156,16 @@ house81:
       - 0.0
       - 0.0
       - 0.0
+    1:
+      floor_height: 3.57
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 house82:
   dataset: matterport
   has_semantics: true
