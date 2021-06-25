@@ -8072,6 +8072,20 @@ area5:
       - 0.0
       - 0.0
       - 0.0
+area5_2:
+  dataset: stanford
+  has_semantics: true
+  floors:
+    0:
+      floor_height: 0.0
+      orientation:
+        - 0.0
+        - 0.0
+        - 0.0
+      position:
+        - 0.0
+        - 0.0
+        - 0.0
 area6:
   dataset: stanford
   has_semantics: true
