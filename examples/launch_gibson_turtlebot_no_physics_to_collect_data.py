@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # Create the dataset
     dataset_path = '/home/michele/myfiles/doors_dataset'
 
-    dataset = DatasetFolderManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
+    folder_manager = DatasetFolderManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
 
     house1_data = GibsonEnvironmentsData().get_environment_data(env_name=env_name)
     floor_height = house1_data[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_FLOOR_HEIGHT]
@@ -96,9 +96,11 @@ if __name__ == '__main__':
             sample.calculate_positiveness(threshold=2.5)
 
             # Save sample
-            dataset.save_sample(sample, use_thread=True)
+            folder_manager.save_sample(sample, use_thread=True)
 
             #print(depth_data, depth_data.shape)
+
+    folder_manager.save_metadata()
 
             
 

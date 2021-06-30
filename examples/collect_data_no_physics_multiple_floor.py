@@ -9,7 +9,7 @@ from gibson_env_utilities.gibson_environments_data import GibsonEnvironmentsData
 from gibson_env_utilities.gibson_run_config import GibsonConfigRun
 from gibson_env_utilities.voronoi_graph_generator import VoronoiGraphGenerator
 
-env_name = 'house12'
+env_name = 'house1'
 
 config_file = GibsonConfigRun(simulation_env=TurtlebotNavigateNoPhysicsEnv, world_name=env_name, floor=0) \
     .is_discrete(False).write_to_file()
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # Create the dataset
     dataset_path = '/home/michele/myfiles/doors_dataset'
 
-    dataset = DatasetFolderManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
+    folder_manager = DatasetFolderManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
 
     # Start Gibson
     env = TurtlebotNavigateNoPhysicsEnv(config=args.config)
@@ -95,9 +95,9 @@ if __name__ == '__main__':
                 sample.calculate_positiveness(threshold=2.5)
 
                 # Save sample
-                dataset.save_sample(sample, use_thread=True)
+                folder_manager.save_sample(sample, use_thread=True)
 
                 #print(depth_data, depth_data.shape)
 
-
+    folder_manager.save_metadata()
 
