@@ -1,7 +1,7 @@
 import cupy
 import cv2
 import numpy as np
-from generic_dataset.dataset_disk_manager import DatasetDiskManager
+from generic_dataset.dataset_folder_manager import DatasetFolderManager
 from gibson.envs.no_physiscs_env import TurtlebotNavigateNoPhysicsEnv
 import argparse
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # Create the dataset
     dataset_path = '/home/michele/myfiles/doors_dataset'
 
-    dataset = DatasetDiskManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
+    dataset = DatasetFolderManager(dataset_path=dataset_path, folder_name=env_name, sample_class=DoorSample, max_treads=8)
 
     house1_data = GibsonEnvironmentsData().get_environment_data(env_name=env_name)
     floor_height = house1_data[GibsonEnvironmentsData.KEY_FLOORS][floor][GibsonEnvironmentsData.KEY_FLOOR_HEIGHT]
