@@ -10147,7 +10147,7 @@ house80:
   has_semantics: true
   floors:
     0:
-      floor_height: -3.6
+      floor_height: -3.13
       orientation:
       - 0.0
       - 0.0
