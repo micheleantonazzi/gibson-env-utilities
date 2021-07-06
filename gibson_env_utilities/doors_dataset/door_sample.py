@@ -1,6 +1,7 @@
 import os
-from typing import List
+from typing import List, NoReturn
 
+import cv2
 import numpy as np
 import pandas as pd
 from generic_dataset.data_pipeline import DataPipeline
@@ -74,6 +75,26 @@ def is_positive(self, threshold: float):
         self.set_label(0)
 
 
+@synchronize_on_fields(field_names={'bgr_image', 'depth_image', 'semantic_image', 'pretty_semantic_image', 'robot_pose', 'label'}, check_pipeline=True)
+def visualize(self) -> NoReturn:
+    """
+    This method visualizes the sample, showing all its fields. Remember to calculates all fields before calling this method.
+    :return:
+    """
+    print(f'Label: {self.get_label()}')
+    print(f'Robot pose: {self.get_robot_pose()}')
+    bgr_image = self.get_bgr_image()
+    depth_image = self.get_depth_image()
+    semantic_image = self.get_semantic_image()
+    pretty_semantic_image = self.get_pretty_semantic_image()
+
+    row_1 = np.concatenate((bgr_image, cv2.cvtColor(depth_image, cv2.COLOR_GRAY2BGR)), axis=1)
+    row_2 = np.concatenate((semantic_image, pretty_semantic_image), axis=1)
+    image = np.concatenate((row_1, row_2), axis=0)
+
+    cv2.imshow('Sample', image)
+    cv2.waitKey()
+
 DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='bgr_image', field_type=np.ndarray, save_function=save_cv2_image_bgr, load_function=load_cv2_image_bgr) \
     .add_custom_pipeline(method_name='pipeline_fix_bgr_image', elaborated_field='bgr_image', final_field='bgr_image', pipeline=pipeline_fix_gbr_image) \
@@ -87,4 +108,5 @@ DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_custom_method(method_name='create_pretty_semantic_image', function=create_pretty_semantic_image) \
     .add_dataset_field(field_name='robot_pose', field_type=dict, save_function=save_compressed_dictionary, load_function=load_compressed_dictionary) \
     .add_custom_method(method_name='calculate_positiveness', function=is_positive) \
+    .add_custom_method(method_name='visualize', function=visualize) \
     .generate_sample_class()

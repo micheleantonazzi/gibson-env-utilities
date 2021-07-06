@@ -9,7 +9,7 @@ from gibson_env_utilities.gibson_environments_data import GibsonEnvironmentsData
 from gibson_env_utilities.gibson_run_config import GibsonConfigRun
 from gibson_env_utilities.voronoi_graph_generator import VoronoiGraphGenerator
 
-env_name = 'house1'
+env_name = 'house11'
 
 config_file = GibsonConfigRun(simulation_env=TurtlebotNavigateNoPhysicsEnv, world_name=env_name, floor=0) \
     .is_discrete(False).write_to_file()
