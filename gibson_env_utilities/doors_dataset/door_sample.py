@@ -47,6 +47,8 @@ def create_pretty_semantic_image(self, color: Color) -> 'DoorSample':
     for index in np.ndindex (pretty_image.shape[:2]):
         if pretty_image[index].tolist() in positive_colorss:
             pretty_image[index] = color.BGR()
+        else:
+            pretty_image[index] = 0
 
     self.set_pretty_semantic_image(pretty_image.astype(np.uint8))
 
