@@ -1,2 +1,6 @@
-recursive-exclude gibson_env_utilities/data/maps_with_voronoi_bitmaps/*
-recursive-exclude gibson_env_utilities/data/voronoi_bitmaps/*
+recursive-include gibson_env_utilities/data/ *
+
+recursive-exclude gibson_env_utilities/data/maps_with_voronoi_bitmaps/ *
+recursive-exclude gibson_env_utilities/data/voronoi_bitmaps/ *
+recursive-exclude gibson_env_utilities/data/temporary_maps/ *
+exclude gibson_env_utilities/data/gibson_config_file_temp.yaml
