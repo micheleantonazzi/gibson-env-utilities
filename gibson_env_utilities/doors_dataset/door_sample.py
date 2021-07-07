@@ -1,5 +1,5 @@
 import os
-from typing import List, NoReturn
+from typing import List, NoReturn, Tuple
 
 import cv2
 import numpy as np
@@ -97,6 +97,22 @@ def visualize(self) -> NoReturn:
     cv2.imshow('Sample', image)
     cv2.waitKey()
 
+
+@synchronize_on_fields(field_names={'pretty_semantic_image'}, check_pipeline=True)
+def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
+    rects = []
+    pretty_image = self.get_pretty_semantic_image()
+    _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=100, maxval=255, type=cv2.THRESH_BINARY)
+    dilated = cv2.dilate(threshed, kernel=(3, 3), iterations=5)
+    contours, _ = cv2.findContours(dilated, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
+
+    for contour in contours:
+        rect = cv2.boundingRect(contour)
+        if rect[2] * rect[3] >= pretty_image.shape[0] * pretty_image.shape[1] * 0.025:
+            rects.append(rect)
+
+    return rects
+
 DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='bgr_image', field_type=np.ndarray, save_function=save_cv2_image_bgr, load_function=load_cv2_image_bgr) \
     .add_custom_pipeline(method_name='pipeline_fix_bgr_image', elaborated_field='bgr_image', final_field='bgr_image', pipeline=pipeline_fix_gbr_image) \
@@ -111,4 +127,5 @@ DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='robot_pose', field_type=dict, save_function=save_compressed_dictionary, load_function=load_compressed_dictionary) \
     .add_custom_method(method_name='calculate_positiveness', function=is_positive) \
     .add_custom_method(method_name='visualize', function=visualize) \
+    .add_custom_method(method_name='get_bboxes', function=get_bboxes) \
     .generate_sample_class()
