@@ -1,6 +1,7 @@
 # Utilities for Gibson Environment
 
 [![BuildTest](https://github.com/micheleantonazzi/gibson-env-utilities/actions/workflows/build-and-publish.yml/badge.svg?branch=main)](https://github.com/micheleantonazzi/gibson-env-utilities/actions/workflows/build-and-publish.yml)
+[![pypi](https://img.shields.io/pypi/v/gibson-env-utilities.svg)](https://pypi.org/project/gibson-env-utilities/)
 [![](https://sonarcloud.io/api/project_badges/measure?project=micheleantonazzi_gibson-env-utilities&metric=coverage)](https://sonarcloud.io/dashboard/index/micheleantonazzi_gibson-env-utilities)
 
 
