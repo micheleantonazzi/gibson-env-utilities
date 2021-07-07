@@ -1,0 +1,2 @@
+recursive-exclude gibson_env_utilities/data/maps_with_voronoi_bitmaps/*
+recursive-exclude gibson_env_utilities/data/voronoi_bitmaps/*
