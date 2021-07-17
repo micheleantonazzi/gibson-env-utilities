@@ -125,7 +125,8 @@ DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_field(field_name='pretty_semantic_image', field_type=np.ndarray) \
     .add_custom_method(method_name='create_pretty_semantic_image', function=create_pretty_semantic_image) \
     .add_dataset_field(field_name='robot_pose', field_type=dict, save_function=save_compressed_dictionary, load_function=load_compressed_dictionary) \
+    .add_dataset_field(field_name='bounding_boxes', field_type=np.ndarray, default_value=np.array([]), load_function=load_compressed_numpy_array, save_function=save_compressed_numpy_array) \
     .add_custom_method(method_name='calculate_positiveness', function=is_positive) \
     .add_custom_method(method_name='visualize', function=visualize) \
-    .add_custom_method(method_name='get_bboxes', function=get_bboxes) \
+    .add_custom_method(method_name='get_bboxes_from_semantic_image', function=get_bboxes) \
     .generate_sample_class()
