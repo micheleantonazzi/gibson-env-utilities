@@ -123,7 +123,6 @@ def yolo_to_x_y(x_center, y_center, x_width, y_height, width, height):
 
 def draw_bboxes(tmp_img, width, height):
     for label, *obj in img_objects:
-        print('OBJCT', obj)
         cv2.rectangle(tmp_img, obj, colors[label], 1)
         font = cv2.FONT_HERSHEY_SIMPLEX
         x1, y1, x2, y2 = obj
@@ -229,7 +228,6 @@ while True:
             if is_mouse_inside_box(x1, y1, x2, y2):
                 # Remove bbox
                 img_objects.remove((label, *obj))
-                print(img_objects)
                 removed_an_object = True
                 point_1 = (-1, -1)
                 break
