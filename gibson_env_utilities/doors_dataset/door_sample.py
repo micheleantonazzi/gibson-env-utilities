@@ -100,6 +100,11 @@ def visualize(self) -> NoReturn:
 
 @synchronize_on_fields(field_names={'pretty_semantic_image'}, check_pipeline=True)
 def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
+    """
+    Returns a list containing the bounding boxes calculated examining semantic image.
+    :param self:
+    :return:
+    """
     rects = []
     pretty_image = self.get_pretty_semantic_image()
     _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=100, maxval=255, type=cv2.THRESH_BINARY)
@@ -112,6 +117,10 @@ def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
             rects.append(rect)
 
     return rects
+# The field bounding_boxes is a numpy array of tuple [(label, (x1, y1, width, height)],
+# where label is the bounding box label and (x1, y1) are the coordinates of the top left point and width height the bbox dimension
+
+DOOR_LABELS = {0: 'Closed door', 1: 'Open door'}
 
 DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='bgr_image', field_type=np.ndarray, save_function=save_cv2_image_bgr, load_function=load_cv2_image_bgr) \
