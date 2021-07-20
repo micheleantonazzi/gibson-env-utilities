@@ -6,6 +6,7 @@ import os
 
 from gibson_env_utilities.doors_dataset.door_sample import DoorSample, DOOR_LABELS
 
+
 dataset_load_path = '/home/michele/myfiles/doors_dataset'
 dataset_save_path = '/home/michele/myfiles/doors_dataset_labelled'
 folder_name = 'house1'
@@ -233,7 +234,7 @@ while True:
                 break
 
         if not removed_an_object:
-            color = (0, 255, 0)
+            color = colors[class_index]
             # draw partial bbox
             cv2.rectangle(tmp_img, point_1, (mouse_x, mouse_y), color, 1)
             # if second click
