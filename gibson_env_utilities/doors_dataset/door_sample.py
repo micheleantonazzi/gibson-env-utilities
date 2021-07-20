@@ -107,7 +107,7 @@ def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
     """
     rects = []
     pretty_image = self.get_pretty_semantic_image()
-    _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=100, maxval=255, type=cv2.THRESH_BINARY)
+    _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=30, maxval=255, type=cv2.THRESH_BINARY)
     dilated = cv2.dilate(threshed, kernel=(3, 3), iterations=5)
     contours, _ = cv2.findContours(dilated, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
 
@@ -120,7 +120,7 @@ def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
 # The field bounding_boxes is a numpy array of tuple [(label, (x1, y1, width, height)],
 # where label is the bounding box label and (x1, y1) are the coordinates of the top left point and width height the bbox dimension
 
-DOOR_LABELS = {0: 'Closed door', 1: 'Open door'}
+DOOR_LABELS = {0: 'Closed door', 1: 'Semi opened door', 2: 'Opened doorw'}
 
 DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='bgr_image', field_type=np.ndarray, save_function=save_cv2_image_bgr, load_function=load_cv2_image_bgr) \

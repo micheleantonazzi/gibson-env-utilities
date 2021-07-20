@@ -14,7 +14,7 @@ folder_manager_load = DatasetFolderManager(dataset_path=dataset_load_path, folde
 folder_manager_save = DatasetFolderManager(dataset_path=dataset_save_path, folder_name=folder_name, sample_class=DoorSample)
 
 possible_labels = sorted(list(DOOR_LABELS.keys()))
-colors = {0: (0, 0, 255), 1: (0, 255, 0)}
+colors = {0: (0, 0, 255), 1:(255, 0, 0), 2: (0, 255, 0)}
 class_index = 0
 img_absoulte_counts = folder_manager_load.get_samples_absolute_counts(label=1)
 img_indexes_iter = iter(folder_manager_load.get_samples_absolute_counts(label=1))
