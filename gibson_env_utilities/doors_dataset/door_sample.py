@@ -99,21 +99,21 @@ def visualize(self) -> NoReturn:
 
 
 @synchronize_on_fields(field_names={'pretty_semantic_image'}, check_pipeline=True)
-def get_bboxes(self) -> List[Tuple[int, int, int, int]]:
+def get_bboxes(self, threshold: float = 0.0) -> List[Tuple[int, int, int, int]]:
     """
     Returns a list containing the bounding boxes calculated examining semantic image.
-    :param self:
+    :param threshold: parameter used to filter the bounding boxes that are too small
     :return:
     """
     rects = []
     pretty_image = self.get_pretty_semantic_image()
     _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=30, maxval=255, type=cv2.THRESH_BINARY)
     dilated = cv2.dilate(threshed, kernel=(3, 3), iterations=5)
-    contours, _ = cv2.findContours(dilated, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(threshed, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
 
     for contour in contours:
         rect = cv2.boundingRect(contour)
-        if rect[2] * rect[3] >= pretty_image.shape[0] * pretty_image.shape[1] * 0.025:
+        if rect[2] * rect[3] >= pretty_image.shape[0] * pretty_image.shape[1] * threshold:
             rects.append(rect)
 
     return rects
