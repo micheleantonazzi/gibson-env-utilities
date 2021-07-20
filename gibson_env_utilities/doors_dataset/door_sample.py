@@ -108,7 +108,6 @@ def get_bboxes(self, threshold: float = 0.0) -> List[Tuple[int, int, int, int]]:
     rects = []
     pretty_image = self.get_pretty_semantic_image()
     _, threshed = cv2.threshold(cv2.cvtColor(pretty_image, cv2.COLOR_BGR2GRAY), thresh=30, maxval=255, type=cv2.THRESH_BINARY)
-    dilated = cv2.dilate(threshed, kernel=(3, 3), iterations=5)
     contours, _ = cv2.findContours(threshed, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
 
     for contour in contours:
