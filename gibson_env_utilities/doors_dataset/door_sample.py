@@ -119,7 +119,7 @@ def get_bboxes(self, threshold: float = 0.0) -> List[Tuple[int, int, int, int]]:
 # The field bounding_boxes is a numpy array of tuple [(label, (x1, y1, width, height)],
 # where label is the bounding box label and (x1, y1) are the coordinates of the top left point and width height the bbox dimension
 
-DOOR_LABELS = {0: 'Closed door', 1: 'Semi opened door', 2: 'Opened doorw'}
+DOOR_LABELS = {0: 'Closed door', 1: 'Semi opened door', 2: 'Opened door'}
 
 DoorSample = SampleGenerator(name='DoorSample', label_set={0, 1}) \
     .add_dataset_field(field_name='bgr_image', field_type=np.ndarray, save_function=save_cv2_image_bgr, load_function=load_cv2_image_bgr) \
