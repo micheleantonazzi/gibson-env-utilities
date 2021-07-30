@@ -38,7 +38,7 @@ def next_img_index():
     sample.set_pretty_semantic_image(sample.get_semantic_image().copy())
     sample.create_pretty_semantic_image(color=Color(red=0, blue=0, green=255))
 
-    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image(threshold=0.05)]
+    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image(threshold=0.02)]
 
     # Apply criterion to filder bounding boxes:
     # The bounding boxe indicates a door that is too close it is discarted. The thoresold is 0.5m
