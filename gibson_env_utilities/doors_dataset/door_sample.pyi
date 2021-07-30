@@ -57,6 +57,42 @@ DOOR_LABELS: dict
 class DoorSample(generic_dataset.generic_sample.GenericSample, metaclass=generic_dataset.sample_generator.MetaSample):
 	def __init__(sample, label: int = 0):
 		...
+	def set_depth_image(sample, value: numpy.ndarray) -> DoorSample:
+		"""
+		Sets "depth_image" parameter.
+		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
+		:raise FieldHasIncorrectTypeException if the given value has a wrong type
+		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
+		:param value: the value to be assigned to depth_image
+		:return: the DoorSample instance
+		"""
+		...
+	def get_depth_image(sample) -> numpy.ndarray:
+		"""
+		Returns "depth_image" value.
+		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
+		:raises AnotherActivePipelineException if the field has an active pipeline
+		:return: the value of depth_image
+		"""
+		...
+	def create_pipeline_for_depth_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Creates and returns a new pipeline to elaborate "depth_image".
+		The pipeline is correctly configured, the data to elaborate are "depth_image"
+		and the pipeline result is set to "depth_image".
+		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
+		:raise AnotherActivePipelineException if other pipeline of the fields are active
+		:return: a new pipeline instance which elaborates "depth_image" and writes the result into "depth_image"
+		:rtype: DataPipeline
+		"""
+		...
+	def get_pipeline_depth_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Returns the pipeline of depth_image. If there isn't an active pipeline, returns None.
+		:return: the pipeline if it exists, None otherwise
+		:rtype: Union[None, DataPipeline]
+		"""
+		...
 	def set_pretty_semantic_image(sample, value: numpy.ndarray) -> DoorSample:
 		"""
 		Sets "pretty_semantic_image" parameter.
@@ -89,96 +125,6 @@ class DoorSample(generic_dataset.generic_sample.GenericSample, metaclass=generic
 	def get_pipeline_pretty_semantic_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
 		"""
 		Returns the pipeline of pretty_semantic_image. If there isn't an active pipeline, returns None.
-		:return: the pipeline if it exists, None otherwise
-		:rtype: Union[None, DataPipeline]
-		"""
-		...
-	def set_robot_pose(sample, value: dict) -> DoorSample:
-		"""
-		Sets "robot_pose" parameter.
-		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
-		:raise FieldHasIncorrectTypeException if the given value has a wrong type
-		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
-		:param value: the value to be assigned to robot_pose
-		:return: the DoorSample instance
-		"""
-		...
-	def get_robot_pose(sample) -> dict:
-		"""
-		Returns "robot_pose" value.
-		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
-		:raises AnotherActivePipelineException if the field has an active pipeline
-		:return: the value of robot_pose
-		"""
-		...
-	def set_bounding_boxes(sample, value: numpy.ndarray) -> DoorSample:
-		"""
-		Sets "bounding_boxes" parameter.
-		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
-		:raise FieldHasIncorrectTypeException if the given value has a wrong type
-		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
-		:param value: the value to be assigned to bounding_boxes
-		:return: the DoorSample instance
-		"""
-		...
-	def get_bounding_boxes(sample) -> numpy.ndarray:
-		"""
-		Returns "bounding_boxes" value.
-		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
-		:raises AnotherActivePipelineException if the field has an active pipeline
-		:return: the value of bounding_boxes
-		"""
-		...
-	def create_pipeline_for_bounding_boxes(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Creates and returns a new pipeline to elaborate "bounding_boxes".
-		The pipeline is correctly configured, the data to elaborate are "bounding_boxes"
-		and the pipeline result is set to "bounding_boxes".
-		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
-		:raise AnotherActivePipelineException if other pipeline of the fields are active
-		:return: a new pipeline instance which elaborates "bounding_boxes" and writes the result into "bounding_boxes"
-		:rtype: DataPipeline
-		"""
-		...
-	def get_pipeline_bounding_boxes(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Returns the pipeline of bounding_boxes. If there isn't an active pipeline, returns None.
-		:return: the pipeline if it exists, None otherwise
-		:rtype: Union[None, DataPipeline]
-		"""
-		...
-	def set_bgr_image(sample, value: numpy.ndarray) -> DoorSample:
-		"""
-		Sets "bgr_image" parameter.
-		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
-		:raise FieldHasIncorrectTypeException if the given value has a wrong type
-		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
-		:param value: the value to be assigned to bgr_image
-		:return: the DoorSample instance
-		"""
-		...
-	def get_bgr_image(sample) -> numpy.ndarray:
-		"""
-		Returns "bgr_image" value.
-		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
-		:raises AnotherActivePipelineException if the field has an active pipeline
-		:return: the value of bgr_image
-		"""
-		...
-	def create_pipeline_for_bgr_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Creates and returns a new pipeline to elaborate "bgr_image".
-		The pipeline is correctly configured, the data to elaborate are "bgr_image"
-		and the pipeline result is set to "bgr_image".
-		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
-		:raise AnotherActivePipelineException if other pipeline of the fields are active
-		:return: a new pipeline instance which elaborates "bgr_image" and writes the result into "bgr_image"
-		:rtype: DataPipeline
-		"""
-		...
-	def get_pipeline_bgr_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Returns the pipeline of bgr_image. If there isn't an active pipeline, returns None.
 		:return: the pipeline if it exists, None otherwise
 		:rtype: Union[None, DataPipeline]
 		"""
@@ -219,6 +165,60 @@ class DoorSample(generic_dataset.generic_sample.GenericSample, metaclass=generic
 		:rtype: Union[None, DataPipeline]
 		"""
 		...
+	def set_bounding_boxes(sample, value: numpy.ndarray) -> DoorSample:
+		"""
+		Sets "bounding_boxes" parameter.
+		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
+		:raise FieldHasIncorrectTypeException if the given value has a wrong type
+		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
+		:param value: the value to be assigned to bounding_boxes
+		:return: the DoorSample instance
+		"""
+		...
+	def get_bounding_boxes(sample) -> numpy.ndarray:
+		"""
+		Returns "bounding_boxes" value.
+		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
+		:raises AnotherActivePipelineException if the field has an active pipeline
+		:return: the value of bounding_boxes
+		"""
+		...
+	def create_pipeline_for_bounding_boxes(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Creates and returns a new pipeline to elaborate "bounding_boxes".
+		The pipeline is correctly configured, the data to elaborate are "bounding_boxes"
+		and the pipeline result is set to "bounding_boxes".
+		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
+		:raise AnotherActivePipelineException if other pipeline of the fields are active
+		:return: a new pipeline instance which elaborates "bounding_boxes" and writes the result into "bounding_boxes"
+		:rtype: DataPipeline
+		"""
+		...
+	def get_pipeline_bounding_boxes(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Returns the pipeline of bounding_boxes. If there isn't an active pipeline, returns None.
+		:return: the pipeline if it exists, None otherwise
+		:rtype: Union[None, DataPipeline]
+		"""
+		...
+	def set_robot_pose(sample, value: dict) -> DoorSample:
+		"""
+		Sets "robot_pose" parameter.
+		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
+		:raise FieldHasIncorrectTypeException if the given value has a wrong type
+		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
+		:param value: the value to be assigned to robot_pose
+		:return: the DoorSample instance
+		"""
+		...
+	def get_robot_pose(sample) -> dict:
+		"""
+		Returns "robot_pose" value.
+		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
+		:raises AnotherActivePipelineException if the field has an active pipeline
+		:return: the value of robot_pose
+		"""
+		...
 	def set_positive_colors(sample, value: typing.List[typing.List[int]]) -> DoorSample:
 		"""
 		Sets "positive_colors" parameter.
@@ -235,42 +235,6 @@ class DoorSample(generic_dataset.generic_sample.GenericSample, metaclass=generic
 		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
 		:raises AnotherActivePipelineException if the field has an active pipeline
 		:return: the value of positive_colors
-		"""
-		...
-	def set_depth_image(sample, value: numpy.ndarray) -> DoorSample:
-		"""
-		Sets "depth_image" parameter.
-		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
-		:raise FieldHasIncorrectTypeException if the given value has a wrong type
-		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
-		:param value: the value to be assigned to depth_image
-		:return: the DoorSample instance
-		"""
-		...
-	def get_depth_image(sample) -> numpy.ndarray:
-		"""
-		Returns "depth_image" value.
-		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
-		:raises AnotherActivePipelineException if the field has an active pipeline
-		:return: the value of depth_image
-		"""
-		...
-	def create_pipeline_for_depth_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Creates and returns a new pipeline to elaborate "depth_image".
-		The pipeline is correctly configured, the data to elaborate are "depth_image"
-		and the pipeline result is set to "depth_image".
-		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
-		:raise AnotherActivePipelineException if other pipeline of the fields are active
-		:return: a new pipeline instance which elaborates "depth_image" and writes the result into "depth_image"
-		:rtype: DataPipeline
-		"""
-		...
-	def get_pipeline_depth_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
-		"""
-		Returns the pipeline of depth_image. If there isn't an active pipeline, returns None.
-		:return: the pipeline if it exists, None otherwise
-		:rtype: Union[None, DataPipeline]
 		"""
 		...
 	def set_label(sample, value: int) -> DoorSample:
@@ -323,6 +287,42 @@ class DoorSample(generic_dataset.generic_sample.GenericSample, metaclass=generic
 	def get_pipeline_semantic_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
 		"""
 		Returns the pipeline of semantic_image. If there isn't an active pipeline, returns None.
+		:return: the pipeline if it exists, None otherwise
+		:rtype: Union[None, DataPipeline]
+		"""
+		...
+	def set_bgr_image(sample, value: numpy.ndarray) -> DoorSample:
+		"""
+		Sets "bgr_image" parameter.
+		If the field is an numpy.ndarray and it has an active pipeline, an exception is raised.
+		:raise FieldHasIncorrectTypeException if the given value has a wrong type
+		:raise AnotherActivePipelineException if the field has an active pipeline (terminate it before setting a new value)
+		:param value: the value to be assigned to bgr_image
+		:return: the DoorSample instance
+		"""
+		...
+	def get_bgr_image(sample) -> numpy.ndarray:
+		"""
+		Returns "bgr_image" value.
+		If the field is an "numpy.ndarray" and it has an active pipeline, an exception is raised. Terminate it before obtain the fields value.
+		:raises AnotherActivePipelineException if the field has an active pipeline
+		:return: the value of bgr_image
+		"""
+		...
+	def create_pipeline_for_bgr_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Creates and returns a new pipeline to elaborate "bgr_image".
+		The pipeline is correctly configured, the data to elaborate are "bgr_image"
+		and the pipeline result is set to "bgr_image".
+		If there is another active pipeline for this field, it raises an AnotherActivePipelineException.
+		:raise AnotherActivePipelineException if other pipeline of the fields are active
+		:return: a new pipeline instance which elaborates "bgr_image" and writes the result into "bgr_image"
+		:rtype: DataPipeline
+		"""
+		...
+	def get_pipeline_bgr_image(sample) -> generic_dataset.data_pipeline.DataPipeline:
+		"""
+		Returns the pipeline of bgr_image. If there isn't an active pipeline, returns None.
 		:return: the pipeline if it exists, None otherwise
 		:rtype: Union[None, DataPipeline]
 		"""

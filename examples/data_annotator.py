@@ -38,7 +38,27 @@ def next_img_index():
     sample.set_pretty_semantic_image(sample.get_semantic_image().copy())
     sample.create_pretty_semantic_image(color=Color(red=0, blue=0, green=255))
 
-    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image()]
+    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image(threshold=0.05)]
+
+    # Apply criterion to filder bounding boxes:
+    # The bounding boxe indicates a door that is too close it is discarted. The thoresold is 0.5m
+    threshold = 0.5
+    new_img_object = []
+    for label, x1, y1, width, height in img_objects:
+        depth_data = sample.get_depth_data()
+        mask = np.zeros(list(depth_data.shape), dtype=np.uint8)
+        points = np.array([[[x1, y1], [x1 + width, y1], [x1 + width, y1 + height], [x1, y1 + height]]], dtype=np.int32)
+        cv2.fillPoly(mask, points, 255)
+        pixels = depth_data[mask == 255]
+        mean = np.mean(pixels)
+
+        if mean >= threshold:
+            new_img_object.append((label, x1, y1, width, height))
+        else:
+            print('DISCARTED')
+
+    img_objects = new_img_object
+
     cv2.displayOverlay(WINDOW_NAME, "Showing image " + str(img_index), 1000)
 
 
@@ -226,7 +246,7 @@ while True:
         for label, *obj in img_objects:
             x1, y1, x2, y2 = obj
             x1, y1, x2, y2 = get_close_icon(x1, y1, x2, y2)
-            if is_mouse_inside_box(x1, y1, x2, y2):
+            if is_mouse_inside_box(x1, y1, x2 - x1, y2 - y1):
                 # Remove bbox
                 img_objects.remove((label, *obj))
                 removed_an_object = True
