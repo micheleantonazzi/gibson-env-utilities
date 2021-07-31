@@ -16,8 +16,9 @@ folder_manager_save = DatasetFolderManager(dataset_path=dataset_save_path, folde
 possible_labels = sorted(list(DOOR_LABELS.keys()))
 colors = {0: (0, 0, 255), 1:(255, 0, 0), 2: (0, 255, 0)}
 class_index = 0
-img_absoulte_counts = folder_manager_load.get_samples_absolute_counts(label=1)
-img_indexes_iter = iter(folder_manager_load.get_samples_absolute_counts(label=1))
+img_absolute_counts = folder_manager_load.get_samples_absolute_counts(label=1)[0:]
+img_indexes_iter = iter(img_absolute_counts)
+
 sample: DoorSample = None
 img_objects = []
 
@@ -38,11 +39,11 @@ def next_img_index():
     sample.set_pretty_semantic_image(sample.get_semantic_image().copy())
     sample.create_pretty_semantic_image(color=Color(red=0, blue=0, green=255))
 
-    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image(threshold=0.02)]
+    img_objects = [(0, *box) for box in sample.get_bboxes_from_semantic_image(threshold=0.03)]
 
     # Apply criterion to filder bounding boxes:
     # The bounding boxe indicates a door that is too close it is discarted. The thoresold is 0.5m
-    threshold = 0.5
+    threshold = 0.3
     new_img_object = []
     for label, x1, y1, width, height in img_objects:
         depth_data = sample.get_depth_data()
@@ -269,6 +270,7 @@ while True:
             else:
                 cv2.displayOverlay(WINDOW_NAME, f"Selected label: {DOOR_LABELS[possible_labels[class_index]]}\nPress [w] or [s] to change.", 120)
 
+    cv2.putText(tmp_img, f'Image {img_index - 1}', (5, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_AA)
     cv2.imshow(WINDOW_NAME, tmp_img)
     pressed_key = cv2.waitKey(100)
 
