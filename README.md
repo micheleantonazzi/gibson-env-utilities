@@ -20,8 +20,8 @@ This Python library offers a series of utilities for easily using [GibsonEnv](ht
 
 ## Environments data
 
-*GibsonEnvironmentsData* implements a series of operations the worlds in Gibson's dataset.
-This information includes:
+*GibsonEnvironmentsData* sotres a series of information regarding the environments in Gibson's dataset.
+These information includes:
 
 * the environment's name
 * if the environment is semantically annotated
@@ -46,13 +46,13 @@ The environments' data are organized in a dictionary, as shown below:
 ## Assets utilities
 GibsonAssetsUtilities defines useful methods for:
 * save and load assets files from disk
-* generate floor maps (and their metadata) starting from a wavefront file (*.obj). The map's metadata includes:
+* generate 2D floor maps (and their metadata) starting from a wavefront file (*.obj). The map's metadata includes:
   * the origin's coordinates in pixel
   * the scale which indicates the real distance covered by a pixel
 
 ## Voronoi graph generator
 
-*VoronoiGraphGenerator* is a utility that generates a graph starting from environment maps (created with *AssetsUtilities* methods). Using this graph, it is possible to extract possible positions in the simulation world to collect data. To generate a graph, a world map is processed as follow:
+*VoronoiGraphGenerator* is a utility that generates a graph starting from environment maps (created with *AssetsUtilities* methods). Using this graph, it is possible to extract possible positions in the simulated worlds to collect data. To generate a graph, a 2D map is processed as follow:
 
 * The map image is binarized using a thresholding procedure (the values between 0 and 250 are turned to 0)
 * The thresholded image is eroded and dilated in order to remove imperfections and smooth the edges
@@ -70,5 +70,5 @@ GibsonAssetsUtilities defines useful methods for:
 
 ## Config run
 *GibsonConfigRun* helps users to configure Gibson to perform a simulation run.
-This class automatically creates a configuration file used by Gibson Environment to read the simulation parameters.
+This class automatically creates a configuration file used by Gibson Environment to read the input parameters.
 You can see this class in action in the correspondent examples ([1](examples/launch_gibson_turtlebot.py) and [2](examples/launch_gibson_turtlebot_no_physics.py)).
