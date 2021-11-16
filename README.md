@@ -57,7 +57,7 @@ GibsonAssetsUtilities defines useful methods for:
 * The map image is binarized using a thresholding procedure (the values between 0 and 250 are turned to 0)
 * The thresholded image is eroded and dilated in order to remove imperfections and smooth the edges
 * In the resulting image, the contours are found
-* Then, it is necessary to identify the space in which the robot can move. To do this, the contours are examined to find the building's external outline. It is assumed that it is the longest one.
+* Then it is necessary to identify the space in which the robot can move. To do this, the contours are examined to find the building's external outline. It is assumed that it is the longest one.
 * Now, the space unreachable for the robot is black-colored. In particular, the building's contour outside is black-filled, like all the other outlines inside it. The resulting image is composed of white pixels (that represent the space in which the robot can travel) and black pixels, where the robot can't travel through.
 * Using the contours' points, the Voronoi decomposition is calculated using Delaunay Triangulation.
 * The segments of the Voronoi facets' perimeter are examined. These lines are drawn only if they are inside the building's outline and do not overlap an obstacle (in other words, if the extreme points that define a segment are inside the image and the correspondent pixel is white).
